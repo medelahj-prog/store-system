@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title id="pageTitle">نظام إدارة المتجر Pro - multilingual</title>
+<title id="pageTitle">نظام إدارة المتجر Pro - متعدد اللغات</title>
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="app_icon.ico">
+<link rel="shortcut icon" href="app_icon.ico">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -39,30 +42,30 @@ body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);min
 .login-bg-circle{position:absolute;border-radius:50%;filter:blur(60px);opacity:.15;}
 .login-bg-c1{width:500px;height:500px;background:var(--gold);top:-100px;right:-100px;}
 .login-bg-c2{width:400px;height:400px;background:var(--blue);bottom:-80px;left:-80px;}
-.lcard{background:var(--s1);border:1px solid var(--border);border-radius:20px;padding:2.5rem;width:420px;max-width:95vw;position:relative;z-index:1;box-shadow:var(--hover-shadow);animation:slideUp .5s cubic-bezier(.4,0,.2,1);}
+.lcard{background:var(--s1);border:1px solid var(--border);border-radius:20px;padding:2rem;width:380px;max-width:95vw;position:relative;z-index:1;box-shadow:var(--hover-shadow);animation:slideUp .5s cubic-bezier(.4,0,.2,1);}
 @keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.lcard-logo{text-align:center;margin-bottom:2rem;}
-.lcard-logo-placeholder{width:80px;height:80px;border-radius:20px;background:linear-gradient(135deg,var(--gold),var(--gold2));margin:0 auto .75rem;display:flex;align-items:center;justify-content:center;font-size:2.2rem;border:3px solid var(--gold);}
-.lcard-logo h1{font-size:1.45rem;font-weight:900;color:var(--gold);}
-.lcard-logo p{font-size:.8rem;color:var(--muted);margin-top:.2rem;}
+.lcard-logo{text-align:center;margin-bottom:1.5rem;}
+.lcard-logo-placeholder{width:70px;height:70px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--gold2));margin:0 auto .6rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:3px solid var(--gold);}
+.lcard-logo h1{font-size:1.3rem;font-weight:900;color:var(--gold);}
+.lcard-logo p{font-size:.75rem;color:var(--muted);margin-top:.2rem;}
 .lang-switcher{display:flex;gap:.4rem;justify-content:center;margin-bottom:1.5rem;}
-.lang-opt{background:var(--s2);border:1.5px solid var(--border);color:var(--text2);font-family:inherit;font-size:.78rem;font-weight:700;padding:.32rem .85rem;border-radius:20px;cursor:pointer;transition:all .18s;}
+.lang-opt{background:var(--s2);border:1.5px solid var(--border);color:var(--text2);font-family:inherit;font-size:.75rem;font-weight:700;padding:.3rem .8rem;border-radius:20px;cursor:pointer;transition:all .18s;}
 .lang-opt:hover{border-color:var(--gold);color:var(--gold);}
 .lang-opt.on{background:var(--gold);border-color:var(--gold);color:#000;}
 .lfield{margin-bottom:1rem;}
-.lfield label{display:block;font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.38rem;text-transform:uppercase;letter-spacing:.04em;}
-.linput{width:100%;background:var(--s2);border:1.5px solid var(--border);border-radius:10px;padding:.7rem 1rem;color:var(--text);font-family:inherit;font-size:.92rem;outline:none;transition:all .18s;}
+.lfield label{display:block;font-size:.7rem;font-weight:700;color:var(--muted);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.04em;}
+.linput{width:100%;background:var(--s2);border:1.5px solid var(--border);border-radius:10px;padding:.65rem .9rem;color:var(--text);font-family:inherit;font-size:.88rem;outline:none;transition:all .18s;}
 .linput:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(240,165,0,.15);}
 .linput::placeholder{color:var(--muted);}
-.lbtn{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border:none;font-family:inherit;font-size:1rem;font-weight:800;padding:.85rem;border-radius:10px;cursor:pointer;margin-top:.5rem;transition:all .18s;box-shadow:0 4px 15px rgba(240,165,0,.3);}
-.lbtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(240,165,0,.4);}
-.lerr{color:var(--red);font-size:.8rem;text-align:center;margin-top:.65rem;display:none;background:rgba(239,68,68,.1);padding:.5rem;border-radius:8px;border:1px solid rgba(239,68,68,.2);}
-.lhint{margin-top:1rem;padding:.75rem;background:var(--s2);border-radius:8px;font-size:.75rem;color:var(--muted);text-align:center;border:1px solid var(--border);}
-.theme-toggle-login{position:absolute;top:1rem;left:1rem;background:var(--s2);border:1px solid var(--border);color:var(--text);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;transition:all .18s;}
+.lbtn{width:100%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border:none;font-family:inherit;font-size:.95rem;font-weight:800;padding:.75rem;border-radius:10px;cursor:pointer;margin-top:.5rem;transition:all .18s;}
+.lbtn:hover{transform:translateY(-2px);}
+.lerr{color:var(--red);font-size:.78rem;text-align:center;margin-top:.6rem;display:none;background:rgba(239,68,68,.1);padding:.4rem;border-radius:8px;}
+.admin-note{position:absolute;bottom:-30px;left:0;right:0;text-align:center;font-size:.65rem;color:var(--muted);}
+.theme-toggle-login{position:absolute;top:1rem;left:1rem;background:var(--s2);border:1px solid var(--border);color:var(--text);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;transition:all .18s;}
 .theme-toggle-login:hover{border-color:var(--gold);}
 
 /* ═══════════════════ SHELL LAYOUT ═══════════════════ */
-#shell{display:none;}
+#shell{display:block;}
 .sb{position:fixed;top:0;right:0;width:260px;height:100vh;background:var(--s1);border-left:1px solid var(--border);display:flex;flex-direction:column;z-index:100;transition:transform .3s cubic-bezier(.4,0,.2,1);}
 .sb-hd{padding:1rem 1.1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.7rem;cursor:pointer;}
 .sb-logo-ph{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;border:2px solid var(--gold);}
@@ -143,7 +146,6 @@ body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);min
 .pb{background:rgba(59,130,246,.12);color:var(--blue);}
 .pp{background:rgba(168,85,247,.12);color:var(--purple);}
 .po{background:rgba(249,115,22,.12);color:var(--orange);}
-
 /* ═══════════════════ MODALS ═══════════════════ */
 .mbg{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:none;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);}
 .mbg.on{display:flex;}
@@ -290,23 +292,6 @@ select.fc option{background:var(--s2);color:var(--text);}
 @media print{body *{visibility:hidden!important;}#pSlot,#pSlot *{visibility:visible!important;}#pSlot{position:fixed;inset:0;background:#fff;z-index:99999;}}
 </style>
 </head>
-<script>
-// التحقق من وجود #admin في الرابط
-if (window.location.hash !== '#admin') {
-  // إخفاء شاشة الدخول وإظهار المتجر مباشرة
-  document.addEventListener('DOMContentLoaded', function() {
-    var loginWrap = document.getElementById('loginWrap');
-    var shell = document.getElementById('shell');
-    if (loginWrap) loginWrap.style.display = 'none';
-    if (shell) shell.style.display = 'block';
-    // فتح صفحة المتجر
-    var pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.classList.remove('on'));
-    var storePage = document.getElementById('p-store');
-    if (storePage) storePage.classList.add('on');
-  });
-}
-</script>
 <body>
 <div id="loginWrap">
   <div class="login-bg">
@@ -334,7 +319,8 @@ if (window.location.hash !== '#admin') {
       <input class="linput" type="password" id="liP" placeholder="••••••" onkeydown="if(event.key==='Enter')doLogin()">
     </div>
     <button class="lbtn" id="loginBtn" onclick="doLogin()">دخول →</button>
-    <div class="lerr" id="lerr">بيانات الدخول غير صحيحة</div> 
+    <div class="lerr" id="lerr">بيانات الدخول غير صحيحة</div>
+    <div class="admin-note">🔐 هذا القسم مخصص للمدير فقط</div>
   </div>
 </div>
 
@@ -473,10 +459,9 @@ if (window.location.hash !== '#admin') {
             <tr><th id="productNameHeader">المنتج</th><th id="categoryHeader">الفئة</th><th id="sellPriceHeader">سعر البيع</th><th id="costHeader">التكلفة</th><th id="stockHeader">المخزون</th><th id="barcodeHeader">الباركود</th><th id="statusHeader2">الحالة</th><th></th>
           </thead>
           <tbody id="prodsBody"></tbody>
-        </table>
+         </table>
       </div>
     </div>
-
     <!-- Orders Page -->
     <div class="page" id="p-orders">
       <div class="card">
@@ -512,6 +497,7 @@ if (window.location.hash !== '#admin') {
       </div>
       <div id="invViewArea" style="margin-top:1rem;display:none"></div>
     </div>
+
     <!-- Customers Page -->
     <div class="page" id="p-customers">
       <div class="card">
@@ -665,7 +651,6 @@ if (window.location.hash !== '#admin') {
 
   </div>
 </div>
-
 <!-- MODALS -->
 <div class="mbg" id="mProd">
   <div class="mdl">
@@ -699,6 +684,7 @@ if (window.location.hash !== '#admin') {
     </div>
   </div>
 </div>
+
 <div class="mbg" id="mRst">
   <div class="mdl" style="max-width:380px">
     <div class="mdl-hd">
@@ -870,7 +856,6 @@ if (window.location.hash !== '#admin') {
 // ==================== MULTILINGUAL SYSTEM ====================
 let currentLang = localStorage.getItem('appLang') || 'ar';
 
-// Currency: AR = أوقية, EN = MRU, FR = MRU
 const getCurrency = () => {
   if (currentLang === 'en') return 'MRU';
   if (currentLang === 'fr') return 'MRU';
@@ -879,46 +864,25 @@ const getCurrency = () => {
 
 const translations = {
   ar: {
-    // General
-    logout: 'خروج', add: '+ إضافة', cart: '🛒 سلة', search: '🔍 بحث', save: '💾 حفظ', cancel: 'إلغاء', delete: '🗑 حذف', edit: '✏️ تعديل', print: '🖨️ طباعة', total: 'الإجمالي', discount: 'خصم', tax: 'ضريبة', price: 'السعر', stock: 'المخزون', category: 'الفئة', name: 'الاسم', phone: 'الهاتف', login: 'دخول', welcome: 'مرحباً', success: 'تم بنجاح', error: 'خطأ', warning: 'تحذير', info: 'معلومات', close: 'إغلاق', confirm: 'تأكيد', yes: 'نعم', no: 'لا', barcode: 'باركود', cost: 'التكلفة', description: 'الوصف', email: 'البريد', city: 'المدينة', company: 'الشركة', note: 'ملاحظة', role: 'الدور', username: 'اسم المستخدم', password: 'كلمة المرور', currency: 'أوقية', pieces: 'قطعة', noData: 'لا توجد بيانات', noOrders: 'لا توجد طلبات', noProducts: 'لا توجد منتجات', noCustomers: 'لا يوجد عملاء', noSuppliers: 'لا يوجد موردون', noInvoices: 'لا توجد فواتير', outOfStock: 'نفد المخزون', lowStock: 'مخزون منخفض', inStock: 'متوفر', available: 'متوفر', deleted: 'تم الحذف', productSaved: 'تم حفظ المنتج', customerSaved: 'تم حفظ العميل', supplierSaved: 'تم حفظ المورد', invoiceSaved: 'تم حفظ الفاتورة', userSaved: 'تم حفظ المستخدم', settingsSaved: 'تم حفظ الإعدادات', passwordChanged: 'تم تغيير كلمة المرور', exportSuccess: 'تم التصدير بنجاح', importSuccess: 'تم الاستيراد بنجاح', dataCleared: 'تم مسح البيانات', orderConfirmed: 'تم تأكيد الطلب', orderReceived: 'تم استلام الطلب', saleComplete: 'تمت عملية البيع', thankYou: 'شكراً لتعاملكم معنا', backToStore: 'العودة للمتجر', checkout: 'إتمام الشراء', orderSummary: 'ملخص الطلب', fullName: 'الاسم الكامل', phoneNumber: 'رقم الهاتف', address: 'العنوان', confirmOrder: 'تأكيد الطلب', cashCustomer: 'عميل نقدي', maxStockReached: 'وصلت للحد الأقصى', productFound: 'تم إيجاد المنتج', stockUpdated: 'تم تحديث المخزون', fillRequiredFields: 'يرجى ملء الحقول الإلزامية', confirmDelete: 'هل أنت متأكد من الحذف؟', usernameExists: 'اسم المستخدم موجود مسبقاً', oldPasswordWrong: 'كلمة المرور الحالية خاطئة', passwordMismatch: 'كلمة المرور الجديدة غير متطابقة', passwordTooShort: 'كلمة المرور قصيرة جداً', noPermission: 'ليس لديك صلاحية', pages: 'صفحة', other: 'أخرى', subtotal: 'المجموع الفرعي', paymentMethod: 'طريقة الدفع', orderNumber: 'رقم الطلب', saleHeld: 'تم الاحتفاظ بالطلب', addedToCart: 'تمت الإضافة للسلة', inCart: 'في السلة', emptyCart: 'السلة فارغة', cash: 'نقداً', pos: 'POS', store: 'المتجر', restock: 'تحديث المخزون', stockGood: 'جميع المنتجات بمستوى جيد', revenueLast7Days: 'إيرادات آخر 7 أيام', financialSummary: 'ملخص مالي', netProfit: 'صافي الأرباح', profitMargin: 'هامش الربح', totalOrders: 'إجمالي الطلبات', totalInvoices: 'إجمالي الفواتير', salesByCategory: 'المبيعات حسب الفئة', new: 'جديد', sale: 'تخفيض', hot: 'رائج', piece: 'قطعة', currentStock: 'المخزون الحالي', enterValidQuantity: 'أدخل كمية صحيحة', addFirstProduct: 'أضف أول منتج', lowStockProducts: 'منتجات بمخزون منخفض', cashPayment: 'نقداً', bankPayment: 'بنك', totalRevenue: 'إجمالي الإيرادات', totalCost: 'إجمالي التكاليف', confirmClearAll: 'سيتم مسح جميع البيانات نهائياً. متأكد؟', importError: 'خطأ في الملف', noPermissionTitle: 'غير مصرح',
-    // Navigation Sections
+    logout: 'خروج', add: '+ إضافة', cart: '🛒 سلة', search: '🔍 بحث', save: '💾 حفظ', cancel: 'إلغاء', delete: '🗑 حذف', edit: '✏️ تعديل', print: '🖨️ طباعة', total: 'الإجمالي', discount: 'خصم', tax: 'ضريبة', price: 'السعر', stock: 'المخزون', category: 'الفئة', name: 'الاسم', phone: 'الهاتف', login: 'دخول', currency: 'أوقية', pieces: 'قطعة', noData: 'لا توجد بيانات', noOrders: 'لا توجد طلبات', noProducts: 'لا توجد منتجات', noCustomers: 'لا يوجد عملاء', noSuppliers: 'لا يوجد موردون', noInvoices: 'لا توجد فواتير', outOfStock: 'نفد المخزون', lowStock: 'مخزون منخفض', inStock: 'متوفر', available: 'متوفر', deleted: 'تم الحذف', productSaved: 'تم حفظ المنتج', customerSaved: 'تم حفظ العميل', supplierSaved: 'تم حفظ المورد', invoiceSaved: 'تم حفظ الفاتورة', userSaved: 'تم حفظ المستخدم', settingsSaved: 'تم حفظ الإعدادات', passwordChanged: 'تم تغيير كلمة المرور', exportSuccess: 'تم التصدير بنجاح', importSuccess: 'تم الاستيراد بنجاح', dataCleared: 'تم مسح البيانات', orderConfirmed: 'تم تأكيد الطلب', orderReceived: 'تم استلام الطلب', saleComplete: 'تمت عملية البيع', thankYou: 'شكراً لتعاملكم معنا', backToStore: 'العودة للمتجر', checkout: 'إتمام الشراء', orderSummary: 'ملخص الطلب', fullName: 'الاسم الكامل', phoneNumber: 'رقم الهاتف', address: 'العنوان', confirmOrder: 'تأكيد الطلب', cashCustomer: 'عميل نقدي', maxStockReached: 'وصلت للحد الأقصى', productFound: 'تم إيجاد المنتج', stockUpdated: 'تم تحديث المخزون', fillRequiredFields: 'يرجى ملء الحقول الإلزامية', confirmDelete: 'هل أنت متأكد من الحذف؟', usernameExists: 'اسم المستخدم موجود مسبقاً', oldPasswordWrong: 'كلمة المرور الحالية خاطئة', passwordMismatch: 'كلمة المرور الجديدة غير متطابقة', passwordTooShort: 'كلمة المرور قصيرة جداً', noPermission: 'ليس لديك صلاحية', pages: 'صفحة', other: 'أخرى', subtotal: 'المجموع الفرعي', paymentMethod: 'طريقة الدفع', orderNumber: 'رقم الطلب', saleHeld: 'تم الاحتفاظ بالطلب', addedToCart: 'تمت الإضافة للسلة', inCart: 'في السلة', emptyCart: 'السلة فارغة', cash: 'نقداً', pos: 'POS', store: 'المتجر', restock: 'تحديث المخزون', stockGood: 'جميع المنتجات بمستوى جيد', revenueLast7Days: 'إيرادات آخر 7 أيام', financialSummary: 'ملخص مالي', netProfit: 'صافي الأرباح', profitMargin: 'هامش الربح', totalOrders: 'إجمالي الطلبات', totalInvoices: 'إجمالي الفواتير', salesByCategory: 'المبيعات حسب الفئة', new: 'جديد', sale: 'تخفيض', hot: 'رائج', piece: 'قطعة', currentStock: 'المخزون الحالي', enterValidQuantity: 'أدخل كمية صحيحة', addFirstProduct: 'أضف أول منتج', lowStockProducts: 'منتجات بمخزون منخفض', totalRevenue: 'إجمالي الإيرادات', totalCost: 'إجمالي التكاليف', confirmClearAll: 'سيتم مسح جميع البيانات نهائياً. متأكد؟', importError: 'خطأ في الملف', noPermissionTitle: 'غير مصرح',
     main: 'الرئيسية', inventory: 'المخزون', financial: 'المالية', system: 'النظام',
     dashboard: '📊 لوحة التحكم', pos: '🖥️ نقطة البيع', store: '🏪 المتجر الإلكتروني', products: '📦 المنتجات', scanner: '📷 الماسح الضوئي', lowstock: '⚠️ مخزون منخفض', orders: '📋 الطلبات', invoices: '🧾 الفواتير', customers: '👥 العملاء', suppliers: '🚚 الموردون', reports: '📈 التقارير', users: '👤 المستخدمون', settings: '⚙️ الإعدادات',
-    // Roles
     admin: '👑 مدير', cashier: '💼 كاشير', viewer: '👁 مشاهد', pending: 'معلقة', paid: 'مدفوعة', cancelled: 'ملغاة',
-    // Login
-    loginSubtitle: 'سجّل دخولك للمتابعة', usernameLabel: 'اسم المستخدم', passwordLabel: 'كلمة المرور', loginBtn: 'دخول →', loginHint: 'الحساب الافتراضي: admin / admin123',
-    // Topbar
-    sbSubtitle: 'نظام POS', settingsIcon: '⚙',
-    // Dashboard
-    lastOrdersTitle: '📋 آخر الطلبات', viewAllBtn: 'الكل', orderNumberHeader: '#', customerHeader: 'العميل', amountHeader: 'المبلغ', paymentHeader: 'الدفع', dateHeader: 'التاريخ', statusHeader: 'الحالة', revenueTitle: '📊 إيرادات 7 أيام', topSellingTitle: '🏆 أكثر مبيعاً', revenueToday: 'إيرادات اليوم', totalOrdersCount: 'إجمالي الطلبات', productsCount: 'المنتجات', lowStockAlert: 'مخزون منخفض', totalRevenueAmount: 'إجمالي الإيرادات', customersCount: 'العملاء',
-    // POS
-    currentInvoiceTitle: '🛒 الفاتورة الحالية', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 أضف منتجاً للبدء', paymentMethodLabel: 'اختر طريقة الدفع:', cashBtn: '💵 نقداً',
-    // Store
-    allProductsBtn: 'الكل', discoverProducts: 'اكتشف أفضل المنتجات',
-    // Products
+    loginSubtitle: 'سجّل دخولك للمتابعة', usernameLabel: 'اسم المستخدم', passwordLabel: 'كلمة المرور', loginBtn: 'دخول →',
+    sbSubtitle: 'نظام POS', settingsIcon: '⚙', lastOrdersTitle: '📋 آخر الطلبات', viewAllBtn: 'الكل', orderNumberHeader: '#', customerHeader: 'العميل', amountHeader: 'المبلغ', paymentHeader: 'الدفع', dateHeader: 'التاريخ', statusHeader: 'الحالة', revenueTitle: '📊 إيرادات 7 أيام', topSellingTitle: '🏆 أكثر مبيعاً', revenueToday: 'إيرادات اليوم', totalOrdersCount: 'إجمالي الطلبات', productsCount: 'المنتجات', lowStockAlert: 'مخزون منخفض', totalRevenueAmount: 'إجمالي الإيرادات', customersCount: 'العملاء',
+    currentInvoiceTitle: '🛒 الفاتورة الحالية', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 أضف منتجاً للبدء', paymentMethodLabel: 'اختر طريقة الدفع:', cashBtn: '💵 نقداً', allProductsBtn: 'الكل', discoverProducts: 'اكتشف أفضل المنتجات',
     productsTitle: '📦 المنتجات', newProductBtn: '+ منتج جديد', productNameHeader: 'المنتج', categoryHeader: 'الفئة', sellPriceHeader: 'سعر البيع', costHeader: 'التكلفة', stockHeader: 'المخزون', barcodeHeader: 'الباركود', statusHeader2: 'الحالة',
-    // Orders
     ordersTitle: '📋 الطلبات', newSaleBtn: '+ بيع جديد', orderNumHeader: 'رقم', customerNameHeader: 'العميل', productsHeader: 'المنتجات', totalAmountHeader: 'المبلغ', paymentMethodHeader: 'الدفع', dateHeader2: 'التاريخ', sourceHeader: 'المصدر',
-    // Invoices
-    invoicesTitle: '🧾 الفواتير', newInvoiceBtn: '+ فاتورة', invoiceNumHeader: 'رقم الفاتورة', clientHeader: 'العميل', dateHeader3: 'التاريخ', amountHeader2: 'المبلغ', statusHeader3: 'الحالة', invoiceNumber: 'رقم الفاتورة', invoiceDate: 'التاريخ', customer: 'العميل', productsList: 'المنتجات', taxNumber: 'الرقم الضريبي',
-    // Customers
+    invoicesTitle: '🧾 الفواتير', newInvoiceBtn: '+ فاتورة', invoiceNumHeader: 'رقم الفاتورة', clientHeader: 'العميل', dateHeader3: 'التاريخ', amountHeader2: 'المبلغ', statusHeader3: 'الحالة', invoiceNumber: 'رقم الفاتورة', customer: 'العميل', productsList: 'المنتجات', taxNumber: 'الرقم الضريبي',
     customersTitle: '👥 العملاء', newCustomerBtn: '+ عميل', customerNameHeader2: 'الاسم', phoneHeader: 'الهاتف', emailHeader: 'البريد', cityHeader: 'المدينة', totalPurchasesHeader: 'إجمالي المشتريات', lastPurchaseHeader: 'آخر شراء',
-    // Suppliers
     suppliersTitle: '🚚 الموردون', newSupplierBtn: '+ مورد', supplierNameHeader: 'الاسم', companyHeader: 'الشركة', phoneHeader2: 'الهاتف', categoryHeader2: 'الفئة', notesHeader: 'ملاحظات',
-    // Low Stock
     lowStockTitle: '⚠️ تنبيهات المخزون', minThresholdLabel: 'الحد الأدنى:',
-    // Reports
     profitReportTitle: '📅 تقرير الأرباح اليومية', dayHeader: 'اليوم', ordersCountHeader: 'الطلبات', revenueHeader: 'الإيرادات', costHeader2: 'التكلفة', profitHeader: 'الأرباح', marginHeader: 'الهامش',
-    // Scanner
     scannerTitle: 'امسح الباركود أو أدخله يدوياً', searchBtn: 'بحث 🔍', productNotFound: 'لم يُعثر على منتج',
-    // Users
     usersTitle: '👤 المستخدمون', newUserBtn: '+ مستخدم', userNameHeader: 'الاسم', usernameHeader: 'اسم الدخول', roleHeader: 'الدور', permissionsHeader: 'الصلاحيات', lastLoginHeader: 'آخر دخول', permissionsTableTitle: '🔐 جدول الصلاحيات',
-    // Settings
     businessInfoTitle: '🏢 معلومات المؤسسة', businessNameLabel: 'اسم المؤسسة', descriptionLabel: 'الوصف', addressLabel: 'العنوان', phoneLabel: 'رقم الهاتف', whatsappLabel: 'واتساب', emailLabel: 'البريد الإلكتروني', facebookLabel: 'صفحة فيسبوك', websiteLabel: 'الموقع الإلكتروني', taxLabel: 'الضريبة (%)', taxNumberLabel: 'الرقم الضريبي', footerTextLabel: 'نص أسفل الفاتورة', saveSettingsBtn: '💾 حفظ', uploadLogoBtn: '📸 تحميل شعار', removeLogoBtn: '🗑 إزالة',
     changePasswordTitle: '🔑 تغيير كلمة المرور', oldPasswordLabel: 'الحالية', newPasswordLabel: 'الجديدة', confirmPasswordLabel: 'تأكيد', changePasswordBtn: 'تغيير',
     backupTitle: '💾 النسخ الاحتياطي', exportBtn: '📤 تصدير', importBtn: '📥 استيراد', clearAllBtn: '⚠️ مسح الكل',
-    // Modals
     newProductTitle: 'إضافة منتج', editProductTitle: 'تعديل المنتج', prodNameLabel: 'الاسم *', prodCategoryLabel: 'الفئة *', prodPriceLabel: 'سعر البيع *', prodOldPriceLabel: 'السعر القديم', prodCostLabel: 'تكلفة الشراء', prodStockLabel: 'المخزون الحالي *', prodMinStockLabel: 'الحد الأدنى للتنبيه', prodUnitLabel: 'الوحدة', prodBarcodeLabel: 'الباركود', prodBadgeLabel: 'وسم', prodDescLabel: 'الوصف', prodImagesLabel: 'الصور', dragDropText: 'اسحب أو اختر صور', barcodePreviewLabel: 'معاينة الباركود', saveProductBtn: '💾 حفظ',
     updateStockTitle: '📦 تحديث المخزون', operationTypeLabel: 'نوع العملية', addOptionLabel: '➕ إضافة (استلام)', subOptionLabel: '➖ خصم (تلف/إرجاع)', setOptionLabel: '🔄 تعيين رصيد محدد', quantityLabel: 'الكمية', noteLabel: 'ملاحظة', applyStockBtn: 'تطبيق',
     newInvoiceTitle: '🧾 فاتورة جديدة', invoiceClientLabel: 'العميل *', invoicePhoneLabel: 'الهاتف', invoiceAmountLabel: 'المبلغ *', invoiceStatusLabel: 'الحالة', pendingOption: 'معلقة', paidOption: 'مدفوعة', cancelledOption: 'ملغاة', invoiceItemsLabel: 'المنتجات/الخدمات', invoiceNotesLabel: 'ملاحظات', saveInvoiceBtn: '💾 حفظ',
@@ -931,46 +895,25 @@ const translations = {
     thankYouMessage: 'شكراً {name}، سنتواصل معك قريباً'
   },
   en: {
-    // General
-    logout: 'Logout', add: '+ Add', cart: '🛒 Cart', search: '🔍 Search', save: '💾 Save', cancel: 'Cancel', delete: '🗑 Delete', edit: '✏️ Edit', print: '🖨️ Print', total: 'Total', discount: 'Discount', tax: 'Tax', price: 'Price', stock: 'Stock', category: 'Category', name: 'Name', phone: 'Phone', login: 'Login', welcome: 'Welcome', success: 'Success', error: 'Error', warning: 'Warning', info: 'Info', close: 'Close', confirm: 'Confirm', yes: 'Yes', no: 'No', barcode: 'Barcode', cost: 'Cost', description: 'Description', email: 'Email', city: 'City', company: 'Company', note: 'Note', role: 'Role', username: 'Username', password: 'Password', currency: 'MRU', pieces: 'pcs', noData: 'No data', noOrders: 'No orders', noProducts: 'No products', noCustomers: 'No customers', noSuppliers: 'No suppliers', noInvoices: 'No invoices', outOfStock: 'Out of stock', lowStock: 'Low stock', inStock: 'In stock', available: 'Available', deleted: 'Deleted', productSaved: 'Product saved', customerSaved: 'Customer saved', supplierSaved: 'Supplier saved', invoiceSaved: 'Invoice saved', userSaved: 'User saved', settingsSaved: 'Settings saved', passwordChanged: 'Password changed', exportSuccess: 'Export successful', importSuccess: 'Import successful', dataCleared: 'Data cleared', orderConfirmed: 'Order confirmed', orderReceived: 'Order received', saleComplete: 'Sale complete', thankYou: 'Thank you for your patronage', backToStore: 'Back to store', checkout: 'Checkout', orderSummary: 'Order summary', fullName: 'Full name', phoneNumber: 'Phone number', address: 'Address', confirmOrder: 'Confirm order', cashCustomer: 'Cash customer', maxStockReached: 'Maximum stock reached', productFound: 'Product found', stockUpdated: 'Stock updated', fillRequiredFields: 'Please fill required fields', confirmDelete: 'Delete this item?', usernameExists: 'Username already exists', oldPasswordWrong: 'Current password is incorrect', passwordMismatch: 'Passwords do not match', passwordTooShort: 'Password is too short (min 4 characters)', noPermission: 'No permission', pages: 'pages', other: 'Other', subtotal: 'Subtotal', paymentMethod: 'Payment method', orderNumber: 'Order number', saleHeld: 'Sale held', addedToCart: 'Added to cart', inCart: 'In cart', emptyCart: 'Cart is empty', cash: 'Cash', pos: 'POS', store: 'Store', restock: 'Restock', stockGood: 'All products have good stock levels', revenueLast7Days: 'Last 7 days revenue', financialSummary: 'Financial summary', netProfit: 'Net profit', profitMargin: 'Profit margin', totalOrders: 'Total orders', totalInvoices: 'Total invoices', salesByCategory: 'Sales by category', new: 'New', sale: 'Sale', hot: 'Hot', piece: 'pc', currentStock: 'Current stock', enterValidQuantity: 'Enter valid quantity', addFirstProduct: 'Add first product', lowStockProducts: 'products with low stock', cashPayment: 'Cash', bankPayment: 'Bank', totalRevenue: 'Total revenue', totalCost: 'Total cost', confirmClearAll: 'This will delete all data permanently. Are you sure?', importError: 'File error', noPermissionTitle: 'Access Denied',
-    // Navigation Sections
+    logout: 'Logout', add: '+ Add', cart: '🛒 Cart', search: '🔍 Search', save: '💾 Save', cancel: 'Cancel', delete: '🗑 Delete', edit: '✏️ Edit', print: '🖨️ Print', total: 'Total', discount: 'Discount', tax: 'Tax', price: 'Price', stock: 'Stock', category: 'Category', name: 'Name', phone: 'Phone', login: 'Login', currency: 'MRU', pieces: 'pcs', noData: 'No data', noOrders: 'No orders', noProducts: 'No products', noCustomers: 'No customers', noSuppliers: 'No suppliers', noInvoices: 'No invoices', outOfStock: 'Out of stock', lowStock: 'Low stock', inStock: 'In stock', available: 'Available', deleted: 'Deleted', productSaved: 'Product saved', customerSaved: 'Customer saved', supplierSaved: 'Supplier saved', invoiceSaved: 'Invoice saved', userSaved: 'User saved', settingsSaved: 'Settings saved', passwordChanged: 'Password changed', exportSuccess: 'Export successful', importSuccess: 'Import successful', dataCleared: 'Data cleared', orderConfirmed: 'Order confirmed', orderReceived: 'Order received', saleComplete: 'Sale complete', thankYou: 'Thank you for your patronage', backToStore: 'Back to store', checkout: 'Checkout', orderSummary: 'Order summary', fullName: 'Full name', phoneNumber: 'Phone number', address: 'Address', confirmOrder: 'Confirm order', cashCustomer: 'Cash customer', maxStockReached: 'Maximum stock reached', productFound: 'Product found', stockUpdated: 'Stock updated', fillRequiredFields: 'Please fill required fields', confirmDelete: 'Delete this item?', usernameExists: 'Username already exists', oldPasswordWrong: 'Current password is incorrect', passwordMismatch: 'Passwords do not match', passwordTooShort: 'Password is too short (min 4 characters)', noPermission: 'No permission', pages: 'pages', other: 'Other', subtotal: 'Subtotal', paymentMethod: 'Payment method', orderNumber: 'Order number', saleHeld: 'Sale held', addedToCart: 'Added to cart', inCart: 'In cart', emptyCart: 'Cart is empty', cash: 'Cash', pos: 'POS', store: 'Store', restock: 'Restock', stockGood: 'All products have good stock levels', revenueLast7Days: 'Last 7 days revenue', financialSummary: 'Financial summary', netProfit: 'Net profit', profitMargin: 'Profit margin', totalOrders: 'Total orders', totalInvoices: 'Total invoices', salesByCategory: 'Sales by category', new: 'New', sale: 'Sale', hot: 'Hot', piece: 'pc', currentStock: 'Current stock', enterValidQuantity: 'Enter valid quantity', addFirstProduct: 'Add first product', lowStockProducts: 'products with low stock', totalRevenue: 'Total revenue', totalCost: 'Total cost', confirmClearAll: 'This will delete all data permanently. Are you sure?', importError: 'File error', noPermissionTitle: 'Access Denied',
     main: 'Main', inventory: 'Inventory', financial: 'Financial', system: 'System',
     dashboard: '📊 Dashboard', pos: '🖥️ POS', store: '🏪 Store', products: '📦 Products', scanner: '📷 Scanner', lowstock: '⚠️ Low Stock', orders: '📋 Orders', invoices: '🧾 Invoices', customers: '👥 Customers', suppliers: '🚚 Suppliers', reports: '📈 Reports', users: '👤 Users', settings: '⚙️ Settings',
-    // Roles
     admin: '👑 Admin', cashier: '💼 Cashier', viewer: '👁 Viewer', pending: 'Pending', paid: 'Paid', cancelled: 'Cancelled',
-    // Login
-    loginSubtitle: 'Login to continue', usernameLabel: 'Username', passwordLabel: 'Password', loginBtn: 'Login →', loginHint: 'Default account: admin / admin123',
-    // Topbar
-    sbSubtitle: 'POS System', settingsIcon: '⚙',
-    // Dashboard
-    lastOrdersTitle: '📋 Recent Orders', viewAllBtn: 'All', orderNumberHeader: '#', customerHeader: 'Customer', amountHeader: 'Amount', paymentHeader: 'Payment', dateHeader: 'Date', statusHeader: 'Status', revenueTitle: '📊 7-Day Revenue', topSellingTitle: '🏆 Top Selling', revenueToday: 'Today\'s Revenue', totalOrdersCount: 'Total Orders', productsCount: 'Products', lowStockAlert: 'Low Stock', totalRevenueAmount: 'Total Revenue', customersCount: 'Customers',
-    // POS
-    currentInvoiceTitle: '🛒 Current Invoice', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 Add a product to start', paymentMethodLabel: 'Select payment method:', cashBtn: '💵 Cash',
-    // Store
-    allProductsBtn: 'All', discoverProducts: 'Discover best products',
-    // Products
+    loginSubtitle: 'Login to continue', usernameLabel: 'Username', passwordLabel: 'Password', loginBtn: 'Login →',
+    sbSubtitle: 'POS System', settingsIcon: '⚙', lastOrdersTitle: '📋 Recent Orders', viewAllBtn: 'All', orderNumberHeader: '#', customerHeader: 'Customer', amountHeader: 'Amount', paymentHeader: 'Payment', dateHeader: 'Date', statusHeader: 'Status', revenueTitle: '📊 7-Day Revenue', topSellingTitle: '🏆 Top Selling', revenueToday: 'Today\'s Revenue', totalOrdersCount: 'Total Orders', productsCount: 'Products', lowStockAlert: 'Low Stock', totalRevenueAmount: 'Total Revenue', customersCount: 'Customers',
+    currentInvoiceTitle: '🛒 Current Invoice', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 Add a product to start', paymentMethodLabel: 'Select payment method:', cashBtn: '💵 Cash', allProductsBtn: 'All', discoverProducts: 'Discover best products',
     productsTitle: '📦 Products', newProductBtn: '+ New Product', productNameHeader: 'Product', categoryHeader: 'Category', sellPriceHeader: 'Selling Price', costHeader: 'Cost', stockHeader: 'Stock', barcodeHeader: 'Barcode', statusHeader2: 'Status',
-    // Orders
     ordersTitle: '📋 Orders', newSaleBtn: '+ New Sale', orderNumHeader: '#', customerNameHeader: 'Customer', productsHeader: 'Products', totalAmountHeader: 'Total', paymentMethodHeader: 'Payment', dateHeader2: 'Date', sourceHeader: 'Source',
-    // Invoices
-    invoicesTitle: '🧾 Invoices', newInvoiceBtn: '+ Invoice', invoiceNumHeader: 'Invoice #', clientHeader: 'Client', dateHeader3: 'Date', amountHeader2: 'Amount', statusHeader3: 'Status', invoiceNumber: 'Invoice Number', invoiceDate: 'Date', customer: 'Customer', productsList: 'Products', taxNumber: 'Tax Number',
-    // Customers
+    invoicesTitle: '🧾 Invoices', newInvoiceBtn: '+ Invoice', invoiceNumHeader: 'Invoice #', clientHeader: 'Client', dateHeader3: 'Date', amountHeader2: 'Amount', statusHeader3: 'Status', invoiceNumber: 'Invoice Number', customer: 'Customer', productsList: 'Products', taxNumber: 'Tax Number',
     customersTitle: '👥 Customers', newCustomerBtn: '+ Customer', customerNameHeader2: 'Name', phoneHeader: 'Phone', emailHeader: 'Email', cityHeader: 'City', totalPurchasesHeader: 'Total Purchases', lastPurchaseHeader: 'Last Purchase',
-    // Suppliers
     suppliersTitle: '🚚 Suppliers', newSupplierBtn: '+ Supplier', supplierNameHeader: 'Name', companyHeader: 'Company', phoneHeader2: 'Phone', categoryHeader2: 'Category', notesHeader: 'Notes',
-    // Low Stock
     lowStockTitle: '⚠️ Stock Alerts', minThresholdLabel: 'Min threshold:',
-    // Reports
     profitReportTitle: '📅 Daily Profit Report', dayHeader: 'Day', ordersCountHeader: 'Orders', revenueHeader: 'Revenue', costHeader2: 'Cost', profitHeader: 'Profit', marginHeader: 'Margin',
-    // Scanner
     scannerTitle: 'Scan barcode or enter manually', searchBtn: 'Search 🔍', productNotFound: 'Product not found',
-    // Users
     usersTitle: '👤 Users', newUserBtn: '+ User', userNameHeader: 'Name', usernameHeader: 'Username', roleHeader: 'Role', permissionsHeader: 'Permissions', lastLoginHeader: 'Last Login', permissionsTableTitle: '🔐 Permissions Table',
-    // Settings
     businessInfoTitle: '🏢 Business Info', businessNameLabel: 'Business Name', descriptionLabel: 'Description', addressLabel: 'Address', phoneLabel: 'Phone', whatsappLabel: 'WhatsApp', emailLabel: 'Email', facebookLabel: 'Facebook', websiteLabel: 'Website', taxLabel: 'Tax (%)', taxNumberLabel: 'Tax Number', footerTextLabel: 'Invoice Footer', saveSettingsBtn: '💾 Save', uploadLogoBtn: '📸 Upload Logo', removeLogoBtn: '🗑 Remove',
     changePasswordTitle: '🔑 Change Password', oldPasswordLabel: 'Current', newPasswordLabel: 'New', confirmPasswordLabel: 'Confirm', changePasswordBtn: 'Change',
     backupTitle: '💾 Backup', exportBtn: '📤 Export', importBtn: '📥 Import', clearAllBtn: '⚠️ Clear All',
-    // Modals
     newProductTitle: 'Add Product', editProductTitle: 'Edit Product', prodNameLabel: 'Name *', prodCategoryLabel: 'Category *', prodPriceLabel: 'Selling Price *', prodOldPriceLabel: 'Old Price', prodCostLabel: 'Purchase Cost', prodStockLabel: 'Current Stock *', prodMinStockLabel: 'Min Stock Alert', prodUnitLabel: 'Unit', prodBarcodeLabel: 'Barcode', prodBadgeLabel: 'Badge', prodDescLabel: 'Description', prodImagesLabel: 'Images', dragDropText: 'Drag or select images', barcodePreviewLabel: 'Barcode Preview', saveProductBtn: '💾 Save',
     updateStockTitle: '📦 Update Stock', operationTypeLabel: 'Operation Type', addOptionLabel: '➕ Add (Receiving)', subOptionLabel: '➖ Subtract (Damage/Return)', setOptionLabel: '🔄 Set Exact Stock', quantityLabel: 'Quantity', noteLabel: 'Note', applyStockBtn: 'Apply',
     newInvoiceTitle: '🧾 New Invoice', invoiceClientLabel: 'Client *', invoicePhoneLabel: 'Phone', invoiceAmountLabel: 'Amount *', invoiceStatusLabel: 'Status', pendingOption: 'Pending', paidOption: 'Paid', cancelledOption: 'Cancelled', invoiceItemsLabel: 'Products/Services', invoiceNotesLabel: 'Notes', saveInvoiceBtn: '💾 Save',
@@ -983,46 +926,25 @@ const translations = {
     thankYouMessage: 'Thank you {name}, we will contact you soon'
   },
   fr: {
-    // General
-    logout: 'Déconnexion', add: '+ Ajouter', cart: '🛒 Panier', search: '🔍 Rechercher', save: '💾 Enregistrer', cancel: 'Annuler', delete: '🗑 Supprimer', edit: '✏️ Modifier', print: '🖨️ Imprimer', total: 'Total', discount: 'Remise', tax: 'TVA', price: 'Prix', stock: 'Stock', category: 'Catégorie', name: 'Nom', phone: 'Téléphone', login: 'Connexion', welcome: 'Bienvenue', success: 'Succès', error: 'Erreur', warning: 'Attention', info: 'Info', close: 'Fermer', confirm: 'Confirmer', yes: 'Oui', no: 'Non', barcode: 'Code-barres', cost: 'Coût', description: 'Description', email: 'Email', city: 'Ville', company: 'Société', note: 'Note', role: 'Rôle', username: 'Nom utilisateur', password: 'Mot de passe', currency: 'MRU', pieces: 'pièces', noData: 'Aucune donnée', noOrders: 'Aucune commande', noProducts: 'Aucun produit', noCustomers: 'Aucun client', noSuppliers: 'Aucun fournisseur', noInvoices: 'Aucune facture', outOfStock: 'Rupture de stock', lowStock: 'Stock faible', inStock: 'En stock', available: 'Disponible', deleted: 'Supprimé', productSaved: 'Produit enregistré', customerSaved: 'Client enregistré', supplierSaved: 'Fournisseur enregistré', invoiceSaved: 'Facture enregistrée', userSaved: 'Utilisateur enregistré', settingsSaved: 'Paramètres enregistrés', passwordChanged: 'Mot de passe changé', exportSuccess: 'Export réussi', importSuccess: 'Import réussi', dataCleared: 'Données effacées', orderConfirmed: 'Commande confirmée', orderReceived: 'Commande reçue', saleComplete: 'Vente complétée', thankYou: 'Merci pour votre confiance', backToStore: 'Retour à la boutique', checkout: 'Validation', orderSummary: 'Résumé de la commande', fullName: 'Nom complet', phoneNumber: 'Numéro de téléphone', address: 'Adresse', confirmOrder: 'Confirmer la commande', cashCustomer: 'Client au comptant', maxStockReached: 'Stock maximum atteint', productFound: 'Produit trouvé', stockUpdated: 'Stock mis à jour', fillRequiredFields: 'Veuillez remplir les champs requis', confirmDelete: 'Supprimer cet élément ?', usernameExists: 'Nom utilisateur existe déjà', oldPasswordWrong: 'Mot de passe actuel incorrect', passwordMismatch: 'Les mots de passe ne correspondent pas', passwordTooShort: 'Mot de passe trop court (min 4 caractères)', noPermission: 'Permission refusée', pages: 'pages', other: 'Autre', subtotal: 'Sous-total', paymentMethod: 'Mode de paiement', orderNumber: 'N° commande', saleHeld: 'Vente en attente', addedToCart: 'Ajouté au panier', inCart: 'Dans le panier', emptyCart: 'Panier vide', cash: 'Espèces', pos: 'PDV', store: 'Boutique', restock: 'Réassort', stockGood: 'Niveaux de stock bons', revenueLast7Days: 'Revenus 7 derniers jours', financialSummary: 'Résumé financier', netProfit: 'Bénéfice net', profitMargin: 'Marge bénéficiaire', totalOrders: 'Total commandes', totalInvoices: 'Total factures', salesByCategory: 'Ventes par catégorie', new: 'Nouveau', sale: 'Promo', hot: 'Tendance', piece: 'pièce', currentStock: 'Stock actuel', enterValidQuantity: 'Entrez une quantité valide', addFirstProduct: 'Ajouter premier produit', lowStockProducts: 'produits en stock faible', cashPayment: 'Espèces', bankPayment: 'Banque', totalRevenue: 'Revenu total', totalCost: 'Coût total', confirmClearAll: 'Cela supprimera toutes les données définitivement. Êtes-vous sûr ?', importError: 'Erreur de fichier', noPermissionTitle: 'Accès refusé',
-    // Navigation Sections
+    logout: 'Déconnexion', add: '+ Ajouter', cart: '🛒 Panier', search: '🔍 Rechercher', save: '💾 Enregistrer', cancel: 'Annuler', delete: '🗑 Supprimer', edit: '✏️ Modifier', print: '🖨️ Imprimer', total: 'Total', discount: 'Remise', tax: 'TVA', price: 'Prix', stock: 'Stock', category: 'Catégorie', name: 'Nom', phone: 'Téléphone', login: 'Connexion', currency: 'MRU', pieces: 'pièces', noData: 'Aucune donnée', noOrders: 'Aucune commande', noProducts: 'Aucun produit', noCustomers: 'Aucun client', noSuppliers: 'Aucun fournisseur', noInvoices: 'Aucune facture', outOfStock: 'Rupture de stock', lowStock: 'Stock faible', inStock: 'En stock', available: 'Disponible', deleted: 'Supprimé', productSaved: 'Produit enregistré', customerSaved: 'Client enregistré', supplierSaved: 'Fournisseur enregistré', invoiceSaved: 'Facture enregistrée', userSaved: 'Utilisateur enregistré', settingsSaved: 'Paramètres enregistrés', passwordChanged: 'Mot de passe changé', exportSuccess: 'Export réussi', importSuccess: 'Import réussi', dataCleared: 'Données effacées', orderConfirmed: 'Commande confirmée', orderReceived: 'Commande reçue', saleComplete: 'Vente complétée', thankYou: 'Merci pour votre confiance', backToStore: 'Retour à la boutique', checkout: 'Validation', orderSummary: 'Résumé de la commande', fullName: 'Nom complet', phoneNumber: 'Numéro de téléphone', address: 'Adresse', confirmOrder: 'Confirmer la commande', cashCustomer: 'Client au comptant', maxStockReached: 'Stock maximum atteint', productFound: 'Produit trouvé', stockUpdated: 'Stock mis à jour', fillRequiredFields: 'Veuillez remplir les champs requis', confirmDelete: 'Supprimer cet élément ?', usernameExists: 'Nom utilisateur existe déjà', oldPasswordWrong: 'Mot de passe actuel incorrect', passwordMismatch: 'Les mots de passe ne correspondent pas', passwordTooShort: 'Mot de passe trop court (min 4 caractères)', noPermission: 'Permission refusée', pages: 'pages', other: 'Autre', subtotal: 'Sous-total', paymentMethod: 'Mode de paiement', orderNumber: 'N° commande', saleHeld: 'Vente en attente', addedToCart: 'Ajouté au panier', inCart: 'Dans le panier', emptyCart: 'Panier vide', cash: 'Espèces', pos: 'PDV', store: 'Boutique', restock: 'Réassort', stockGood: 'Niveaux de stock bons', revenueLast7Days: 'Revenus 7 derniers jours', financialSummary: 'Résumé financier', netProfit: 'Bénéfice net', profitMargin: 'Marge bénéficiaire', totalOrders: 'Total commandes', totalInvoices: 'Total factures', salesByCategory: 'Ventes par catégorie', new: 'Nouveau', sale: 'Promo', hot: 'Tendance', piece: 'pièce', currentStock: 'Stock actuel', enterValidQuantity: 'Entrez une quantité valide', addFirstProduct: 'Ajouter premier produit', lowStockProducts: 'produits en stock faible', totalRevenue: 'Revenu total', totalCost: 'Coût total', confirmClearAll: 'Cela supprimera toutes les données définitivement. Êtes-vous sûr ?', importError: 'Erreur de fichier', noPermissionTitle: 'Accès refusé',
     main: 'Principal', inventory: 'Stock', financial: 'Finances', system: 'Système',
     dashboard: '📊 Tableau de bord', pos: '🖥️ Point de vente', store: '🏪 Boutique', products: '📦 Produits', scanner: '📷 Scanner', lowstock: '⚠️ Stock faible', orders: '📋 Commandes', invoices: '🧾 Factures', customers: '👥 Clients', suppliers: '🚚 Fournisseurs', reports: '📈 Rapports', users: '👤 Utilisateurs', settings: '⚙️ Paramètres',
-    // Roles
     admin: '👑 Admin', cashier: '💼 Caissier', viewer: '👁 Visualiseur', pending: 'En attente', paid: 'Payée', cancelled: 'Annulée',
-    // Login
-    loginSubtitle: 'Connectez-vous pour continuer', usernameLabel: 'Nom utilisateur', passwordLabel: 'Mot de passe', loginBtn: 'Connexion →', loginHint: 'Compte par défaut: admin / admin123',
-    // Topbar
-    sbSubtitle: 'Système POS', settingsIcon: '⚙',
-    // Dashboard
-    lastOrdersTitle: '📋 Dernières commandes', viewAllBtn: 'Tout', orderNumberHeader: '#', customerHeader: 'Client', amountHeader: 'Montant', paymentHeader: 'Paiement', dateHeader: 'Date', statusHeader: 'Statut', revenueTitle: '📊 Revenus 7 jours', topSellingTitle: '🏆 Meilleures ventes', revenueToday: 'Revenus du jour', totalOrdersCount: 'Total commandes', productsCount: 'Produits', lowStockAlert: 'Stock faible', totalRevenueAmount: 'Revenu total', customersCount: 'Clients',
-    // POS
-    currentInvoiceTitle: '🛒 Facture actuelle', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 Ajoutez un produit', paymentMethodLabel: 'Mode de paiement:', cashBtn: '💵 Espèces',
-    // Store
-    allProductsBtn: 'Tout', discoverProducts: 'Découvrez les meilleurs produits',
-    // Products
+    loginSubtitle: 'Connectez-vous pour continuer', usernameLabel: 'Nom utilisateur', passwordLabel: 'Mot de passe', loginBtn: 'Connexion →',
+    sbSubtitle: 'Système POS', settingsIcon: '⚙', lastOrdersTitle: '📋 Dernières commandes', viewAllBtn: 'Tout', orderNumberHeader: '#', customerHeader: 'Client', amountHeader: 'Montant', paymentHeader: 'Paiement', dateHeader: 'Date', statusHeader: 'Statut', revenueTitle: '📊 Revenus 7 jours', topSellingTitle: '🏆 Meilleures ventes', revenueToday: 'Revenus du jour', totalOrdersCount: 'Total commandes', productsCount: 'Produits', lowStockAlert: 'Stock faible', totalRevenueAmount: 'Revenu total', customersCount: 'Clients',
+    currentInvoiceTitle: '🛒 Facture actuelle', holdBtn: '⏸', clearBtn: '🗑', emptyCartMsg: '📦 Ajoutez un produit', paymentMethodLabel: 'Mode de paiement:', cashBtn: '💵 Espèces', allProductsBtn: 'Tout', discoverProducts: 'Découvrez les meilleurs produits',
     productsTitle: '📦 Produits', newProductBtn: '+ Nouveau produit', productNameHeader: 'Produit', categoryHeader: 'Catégorie', sellPriceHeader: 'Prix de vente', costHeader: 'Coût', stockHeader: 'Stock', barcodeHeader: 'Code-barres', statusHeader2: 'Statut',
-    // Orders
     ordersTitle: '📋 Commandes', newSaleBtn: '+ Nouvelle vente', orderNumHeader: '#', customerNameHeader: 'Client', productsHeader: 'Produits', totalAmountHeader: 'Total', paymentMethodHeader: 'Paiement', dateHeader2: 'Date', sourceHeader: 'Source',
-    // Invoices
-    invoicesTitle: '🧾 Factures', newInvoiceBtn: '+ Facture', invoiceNumHeader: 'Facture #', clientHeader: 'Client', dateHeader3: 'Date', amountHeader2: 'Montant', statusHeader3: 'Statut', invoiceNumber: 'N° Facture', invoiceDate: 'Date', customer: 'Client', productsList: 'Produits', taxNumber: 'N° TVA',
-    // Customers
+    invoicesTitle: '🧾 Factures', newInvoiceBtn: '+ Facture', invoiceNumHeader: 'Facture #', clientHeader: 'Client', dateHeader3: 'Date', amountHeader2: 'Montant', statusHeader3: 'Statut', invoiceNumber: 'N° Facture', customer: 'Client', productsList: 'Produits', taxNumber: 'N° TVA',
     customersTitle: '👥 Clients', newCustomerBtn: '+ Client', customerNameHeader2: 'Nom', phoneHeader: 'Téléphone', emailHeader: 'Email', cityHeader: 'Ville', totalPurchasesHeader: 'Total achats', lastPurchaseHeader: 'Dernier achat',
-    // Suppliers
     suppliersTitle: '🚚 Fournisseurs', newSupplierBtn: '+ Fournisseur', supplierNameHeader: 'Nom', companyHeader: 'Société', phoneHeader2: 'Téléphone', categoryHeader2: 'Catégorie', notesHeader: 'Notes',
-    // Low Stock
     lowStockTitle: '⚠️ Alertes stock', minThresholdLabel: 'Seuil minimum:',
-    // Reports
     profitReportTitle: '📅 Rapport quotidien', dayHeader: 'Jour', ordersCountHeader: 'Commandes', revenueHeader: 'Revenus', costHeader2: 'Coût', profitHeader: 'Bénéfice', marginHeader: 'Marge',
-    // Scanner
     scannerTitle: 'Scannez ou entrez le code-barres', searchBtn: 'Rechercher 🔍', productNotFound: 'Produit non trouvé',
-    // Users
     usersTitle: '👤 Utilisateurs', newUserBtn: '+ Utilisateur', userNameHeader: 'Nom', usernameHeader: 'Nom utilisateur', roleHeader: 'Rôle', permissionsHeader: 'Permissions', lastLoginHeader: 'Dernière connexion', permissionsTableTitle: '🔐 Table des permissions',
-    // Settings
     businessInfoTitle: '🏢 Informations', businessNameLabel: 'Nom entreprise', descriptionLabel: 'Description', addressLabel: 'Adresse', phoneLabel: 'Téléphone', whatsappLabel: 'WhatsApp', emailLabel: 'Email', facebookLabel: 'Facebook', websiteLabel: 'Site web', taxLabel: 'TVA (%)', taxNumberLabel: 'N° TVA', footerTextLabel: 'Pied de facture', saveSettingsBtn: '💾 Enregistrer', uploadLogoBtn: '📸 Télécharger logo', removeLogoBtn: '🗑 Supprimer',
     changePasswordTitle: '🔑 Changer mot de passe', oldPasswordLabel: 'Actuel', newPasswordLabel: 'Nouveau', confirmPasswordLabel: 'Confirmer', changePasswordBtn: 'Changer',
     backupTitle: '💾 Sauvegarde', exportBtn: '📤 Exporter', importBtn: '📥 Importer', clearAllBtn: '⚠️ Tout effacer',
-    // Modals
     newProductTitle: 'Ajouter produit', editProductTitle: 'Modifier produit', prodNameLabel: 'Nom *', prodCategoryLabel: 'Catégorie *', prodPriceLabel: 'Prix de vente *', prodOldPriceLabel: 'Ancien prix', prodCostLabel: "Coût d'achat", prodStockLabel: 'Stock actuel *', prodMinStockLabel: 'Alerte stock min', prodUnitLabel: 'Unité', prodBarcodeLabel: 'Code-barres', prodBadgeLabel: 'Badge', prodDescLabel: 'Description', prodImagesLabel: 'Images', dragDropText: 'Glissez ou sélectionnez', barcodePreviewLabel: 'Aperçu code-barres', saveProductBtn: '💾 Enregistrer',
     updateStockTitle: '📦 Mettre à jour stock', operationTypeLabel: "Type d'opération", addOptionLabel: '➕ Ajouter (Réception)', subOptionLabel: '➖ Retirer (Perte/Retour)', setOptionLabel: '🔄 Définir stock exact', quantityLabel: 'Quantité', noteLabel: 'Note', applyStockBtn: 'Appliquer',
     newInvoiceTitle: '🧾 Nouvelle facture', invoiceClientLabel: 'Client *', invoicePhoneLabel: 'Téléphone', invoiceAmountLabel: 'Montant *', invoiceStatusLabel: 'Statut', pendingOption: 'En attente', paidOption: 'Payée', cancelledOption: 'Annulée', invoiceItemsLabel: 'Produits/Services', invoiceNotesLabel: 'Notes', saveInvoiceBtn: '💾 Enregistrer',
@@ -1035,11 +957,8 @@ const translations = {
     thankYouMessage: 'Merci {name}, nous vous contacterons bientôt'
   }
 };
-function t(key) {
-  let val = translations[currentLang][key];
-  if (!val && currentLang !== 'ar') val = translations.ar[key];
-  return val || key;
-}
+
+function t(key) { return translations[currentLang][key] || key; }
 
 function fmt(n) {
   if (currentLang === 'en') return (n || 0).toLocaleString() + ' MRU';
@@ -1061,7 +980,6 @@ function setLang(lang) {
   if (typeof rStoreGrid === 'function' && document.getElementById('p-store').classList.contains('on')) rStoreGrid();
   if (typeof renderSum === 'function') renderSum();
   if (typeof rDash === 'function' && document.getElementById('p-dashboard').classList.contains('on')) rDash();
-  toast(`🌍 ${t('welcome')}`);
 }
 
 function updateLanguage() {
@@ -1075,7 +993,7 @@ function updateLanguage() {
     }
   });
   
-  const specificIds = ['logoutBtn', 'tbAdd', 'cartBtn', 'holdBtn', 'clearBtn', 'cashBtn', 'bankilyBtn', 'masriviBtn', 'sedadBtn', 'bimbankBtn', 'clickBtn', 'gazapayBtn', 'amantyBtn', 'stAll', 'newProductBtn', 'newSaleBtn', 'newInvoiceBtn', 'newCustomerBtn', 'newSupplierBtn', 'newUserBtn', 'saveSettingsBtn', 'changePasswordBtn', 'exportBtn', 'importBtn', 'clearAllBtn', 'saveProductBtn', 'applyStockBtn', 'saveInvoiceBtn', 'saveCustBtn', 'saveSupBtn', 'saveUserBtn', 'printBarcodeBtn', 'addToPosBtn', 'printReceiptBtn', 'printInvoiceBtn', 'closePayBtn', 'checkoutBtn', 'viewAllBtn', 'loginBtn', 'uploadLogoBtn', 'removeLogoBtn', 'cancelBtn', 'cancelStockBtn', 'cancelInvoiceBtn', 'cancelCustBtn', 'cancelSupBtn', 'cancelUserBtn', 'closeCartBtn'];
+  const specificIds = ['logoutBtn', 'tbAdd', 'cartBtn', 'holdBtn', 'clearBtn', 'cashBtn', 'bankilyBtn', 'masriviBtn', 'sedadBtn', 'bimbankBtn', 'clickBtn', 'gazapayBtn', 'amantyBtn', 'stAll', 'newProductBtn', 'newSaleBtn', 'newInvoiceBtn', 'newCustomerBtn', 'newSupplierBtn', 'newUserBtn', 'saveSettingsBtn', 'changePasswordBtn', 'exportBtn', 'importBtn', 'clearAllBtn', 'saveProductBtn', 'applyStockBtn', 'saveInvoiceBtn', 'saveCustBtn', 'saveSupBtn', 'saveUserBtn', 'printBarcodeBtn', 'addToPosBtn', 'printReceiptBtn', 'printInvoiceBtn', 'closePayBtn', 'checkoutBtn', 'viewAllBtn', 'loginBtn', 'uploadLogoBtn', 'removeLogoBtn'];
   specificIds.forEach(id => {
     const el = document.getElementById(id);
     if (el && translations[currentLang][id]) {
@@ -1186,8 +1104,6 @@ function doLogin() {
   nav('dashboard');
   updateSCnt();
   updateLanguage();
-  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-  else document.documentElement.setAttribute('data-theme', 'light');
 }
 
 function doLogout() {
@@ -1270,6 +1186,7 @@ function renderPosGrid() {
   if (q) list = list.filter(p => p.name.toLowerCase().includes(q) || (p.barcode || '').includes(q));
   document.getElementById('posGrid').innerHTML = list.map(p => `<div class="pp ${p.stock <= 0 ? 'oos' : ''}" onclick="${p.stock > 0 ? `addToPos('${p.id}')` : ''}"><div class="pp-img">${p.images && p.images.length ? `<img src="${p.images[0]}">` : '<span style="opacity:.25">📦</span>'}${p.stock <= 0 ? `<div class="pp-oos">${t('outOfStock')}</div>` : ''}</div><div class="pp-info"><div class="pp-name">${p.name}</div><div class="pp-price">${p.price} ${getCurrency()}</div><div class="pp-stock">${t('stock')}: ${p.stock} ${p.unit || t('piece')}</div></div></div>`).join('') || `<div class="tbl-empty">${t('noProducts')}</div>`;
 }
+
 function addToPos(id) {
   const p = D.products.find(x => x.id === id); if (!p || p.stock <= 0) return;
   const ex = posCart.find(c => c.id === id);
@@ -1343,12 +1260,7 @@ function buildRcptPrev(o) {
   document.getElementById('rcptPreview').innerHTML = `<div class="receipt-print" style="font-size:7.5pt"><div class="rp-hd"><h2 style="font-size:10pt">${b.name || t('store')}</h2>${b.phone ? `<p>${b.phone}</p>` : ''}<p>#${o.id} | ${o.date}</p></div>${(o.items || []).map(it => `<div class="rp-item"><span>${it.qty}x ${it.name}</span><span>${(it.price * it.qty).toLocaleString()}</span></div>`).join('')}<div style="border-top:1px solid #000;margin-top:3px;padding-top:3px">${o.discount ? `<div class="rp-tot"><span>${t('discount')}</span><span>-${o.discount.toLocaleString()}</span></div>` : ''}<div class="rp-tot g"><span>${t('total')}</span><span>${o.total.toLocaleString()} ${getCurrency()}</span></div></div><div class="rp-ft">${b.footer || t('thankYou')}</div></div>`;
 }
 
-function printRcpt() {
-  if (!lastSale) return;
-  const b = D.biz;
-  document.getElementById('pSlot').innerHTML = `<div class="receipt-print"><div class="rp-hd"><h2>${b.name || t('store')}</h2>${b.addr ? `<p>${b.addr}</p>` : ''}${b.phone ? `<p>📞 ${b.phone}</p>` : ''}<p>${t('orderNumber')}: #${lastSale.id} | ${lastSale.date} ${lastSale.time || ''}</p></div>${(lastSale.items || []).map(it => `<div class="rp-item"><span>${it.qty}x ${it.name}</span><span>${(it.price * it.qty).toLocaleString()} ${getCurrency()}</span></div>`).join('')}<div style="border-top:1px solid #ddd;margin-top:4px;padding-top:4px">${lastSale.discount ? `<div class="rp-tot"><span>${t('discount')}</span><span>-${lastSale.discount.toLocaleString()}</span></div>` : ''}<div class="rp-tot g"><span>${t('total')}</span><span>${lastSale.total.toLocaleString()} ${getCurrency()}</span></div></div><div class="rp-ft">${b.footer || t('thankYou')}<br>${b.wa ? `${t('whatsapp')}: ${b.wa}` : ''} ${b.fb ? `| ${t('facebook')}: ${b.fb}` : ''}</div></div>`;
-  window.print();
-}
+function printRcpt() { if (!lastSale) return; const b = D.biz; document.getElementById('pSlot').innerHTML = `<div class="receipt-print"><div class="rp-hd"><h2>${b.name || t('store')}</h2>${b.addr ? `<p>${b.addr}</p>` : ''}${b.phone ? `<p>📞 ${b.phone}</p>` : ''}<p>${t('orderNumber')}: #${lastSale.id} | ${lastSale.date} ${lastSale.time || ''}</p></div>${(lastSale.items || []).map(it => `<div class="rp-item"><span>${it.qty}x ${it.name}</span><span>${(it.price * it.qty).toLocaleString()} ${getCurrency()}</span></div>`).join('')}<div style="border-top:1px solid #ddd;margin-top:4px;padding-top:4px">${lastSale.discount ? `<div class="rp-tot"><span>${t('discount')}</span><span>-${lastSale.discount.toLocaleString()}</span></div>` : ''}<div class="rp-tot g"><span>${t('total')}</span><span>${lastSale.total.toLocaleString()} ${getCurrency()}</span></div></div><div class="rp-ft">${b.footer || t('thankYou')}<br>${b.wa ? `${t('whatsapp')}: ${b.wa}` : ''} ${b.fb ? `| ${t('facebook')}: ${b.fb}` : ''}</div></div>`; window.print(); }
 
 function printInvFromSale() { if (!lastSale) return; document.getElementById('pSlot').innerHTML = buildInvH({ id: lastSale.invId, client: lastSale.customerName, phone: '', items: (lastSale.items || []).map(c => `${c.qty}x ${c.name}`).join('، '), amount: lastSale.total, status: 'paid', date: lastSale.date, notes: '' }, lastSale.items); window.print(); }
 
@@ -1384,19 +1296,9 @@ function saveProd() {
 
 function delProd(id) { if (!confirm(t('confirmDelete'))) return; D.products = D.products.filter(p => p.id !== id); sv('products'); renderProds(); renderPosGrid(); rStore(); buildSB(); toast(t('deleted')); }
 
-function openRst(id) {
-  eRstId = id; const p = D.products.find(x => x.id === id); if (!p) return;
-  document.getElementById('rstInfo').innerHTML = `<div style="display:flex;align-items:center;gap:.65rem;background:var(--s2);border-radius:8px;padding:.65rem .85rem"><div style="width:38px;height:38px;border-radius:5px;overflow:hidden;background:var(--s3);display:flex;align-items:center;justify-content:center;flex-shrink:0">${p.images && p.images.length ? `<img src="${p.images[0]}" style="width:100%;height:100%;object-fit:cover">` : '📦'}</div><div><div style="font-weight:800">${p.name}</div><div style="font-size:.72rem;color:var(--muted)">${t('currentStock')}: <b style="color:${p.stock <= 5 ? 'var(--red)' : 'var(--green)'}">${p.stock} ${p.unit || t('piece')}</b></div></div></div>`;
-  document.getElementById('rstQty').value = 1; document.getElementById('rstNote').value = ''; document.getElementById('rstType').value = 'add'; openM('mRst');
-}
+function openRst(id) { eRstId = id; const p = D.products.find(x => x.id === id); if (!p) return; document.getElementById('rstInfo').innerHTML = `<div style="display:flex;align-items:center;gap:.65rem;background:var(--s2);border-radius:8px;padding:.65rem .85rem"><div style="width:38px;height:38px;border-radius:5px;overflow:hidden;background:var(--s3);display:flex;align-items:center;justify-content:center;flex-shrink:0">${p.images && p.images.length ? `<img src="${p.images[0]}" style="width:100%;height:100%;object-fit:cover">` : '📦'}</div><div><div style="font-weight:800">${p.name}</div><div style="font-size:.72rem;color:var(--muted)">${t('currentStock')}: <b style="color:${p.stock <= 5 ? 'var(--red)' : 'var(--green)'}">${p.stock} ${p.unit || t('piece')}</b></div></div></div>`; document.getElementById('rstQty').value = 1; document.getElementById('rstNote').value = ''; document.getElementById('rstType').value = 'add'; openM('mRst'); }
 
-function doRst() {
-  const p = D.products.find(x => x.id === eRstId); if (!p) return;
-  const type = document.getElementById('rstType').value, qty = parseInt(document.getElementById('rstQty').value) || 0;
-  if (qty <= 0) { toast(t('enterValidQuantity'), 'err'); return; }
-  if (type === 'add') p.stock += qty; else if (type === 'sub') p.stock = Math.max(0, p.stock - qty); else p.stock = qty;
-  p.updatedAt = new Date().toISOString(); sv('products'); closeM('mRst'); renderProds(); renderPosGrid(); renderLS(); buildSB(); toast(t('stockUpdated') + `: ${p.name}: ${p.stock} ${p.unit || t('piece')}`);
-}
+function doRst() { const p = D.products.find(x => x.id === eRstId); if (!p) return; const type = document.getElementById('rstType').value, qty = parseInt(document.getElementById('rstQty').value) || 0; if (qty <= 0) { toast(t('enterValidQuantity'), 'err'); return; } if (type === 'add') p.stock += qty; else if (type === 'sub') p.stock = Math.max(0, p.stock - qty); else p.stock = qty; p.updatedAt = new Date().toISOString(); sv('products'); closeM('mRst'); renderProds(); renderPosGrid(); renderLS(); buildSB(); toast(t('stockUpdated') + `: ${p.name}: ${p.stock} ${p.unit || t('piece')}`); }
 
 function pBC(code) { if (!code || code.length < 6) { document.getElementById('bcPrev').style.display = 'none'; return; } try { JsBarcode('#bcPrevSvg', code, { format: 'CODE128', width: 1.6, height: 38, displayValue: true, fontOptions: 'bold', fontSize: 11, background: '#ffffff', lineColor: '#000000' }); document.getElementById('bcPrev').style.display = 'block'; } catch (e) { } }
 
@@ -1412,86 +1314,31 @@ function setSF(f, b) { stFilter = f; document.querySelectorAll('#stCats .btn, #s
 
 function searchSt(q) { stSearch = q; rStoreGrid(); }
 
-function rStoreGrid() { let list = [...D.products]; if (stFilter !== 'all') list = list.filter(p => p.category === stFilter); if (stSearch) list = list.filter(p => p.name.toLowerCase().includes(stSearch.toLowerCase())); const g = document.getElementById('storeGrid'); if (!list.length) { g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)"><div style="font-size:2.5rem;margin-bottom:.5rem">📦</div>${t('noProducts')}</div>`; return; } g.innerHTML = list.map((p, i) => { const inCart = D.storeCart.find(c => c.id === p.id); const bt = { new: '🆕 ' + t('new'), sale: '🏷️ ' + t('sale'), hot: '🔥 ' + t('hot') }[p.badge] || ''; return `<div class="prod-card"><div class="pc-img">${p.images && p.images.length ? `<img src="${p.images[0]}">` : '<div style="font-size:3rem;opacity:.25">📦</div>'}${bt ? `<div class="pc-badge">${bt}</div>` : ''}${p.stock <= 0 ? `<div class="pc-oos-overlay">${t('outOfStock')}</div>` : ''}</div><div class="pc-body"><div style="font-size:.7rem;font-weight:700;color:var(--gold);margin-bottom:.2rem">${p.category}</div><div style="font-weight:800;font-size:.9rem;margin-bottom:.3rem">${p.name}</div>${p.desc ? `<div style="font-size:.7rem;color:var(--muted);margin-bottom:.6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${p.desc}</div>` : ''}<div style="display:flex;align-items:center;justify-content:space-between;gap:.4rem">${p.oldPrice ? `<div><div style="font-size:.65rem;text-decoration:line-through;color:var(--muted)">${p.oldPrice} ${getCurrency()}</div><div style="font-size:1rem;font-weight:900;color:var(--gold)">${p.price} ${getCurrency()}</div></div>` : `<div style="font-size:1rem;font-weight:900;color:var(--gold)">${p.price} ${getCurrency()}</div>`}<button onclick="${p.stock > 0 ? `addToSC('${p.id}',this)` : ''}" ${p.stock <= 0 ? 'disabled' : ''} class="btn sm" style="background:${inCart ? 'var(--green)' : 'var(--gold)'};color:#000;${p.stock <= 0 ? 'opacity:.4' : ''}">${p.stock <= 0 ? t('outOfStock') : inCart ? '✓ ' + t('inCart') : '+ ' + t('cart')}</button></div></div></div>`; }).join(''); }
+function rStoreGrid() { let list = [...D.products]; if (stFilter !== 'all') list = list.filter(p => p.category === stFilter); if (stSearch) list = list.filter(p => p.name.toLowerCase().includes(stSearch.toLowerCase())); const g = document.getElementById('storeGrid'); if (!list.length) { g.innerHTML = `<div class="tbl-empty"><div style="font-size:2rem">📦</div>${t('noProducts')}</div>`; return; } g.innerHTML = list.map((p, i) => { const inCart = D.storeCart.find(c => c.id === p.id); const bt = { new: '🆕 ' + t('new'), sale: '🏷️ ' + t('sale'), hot: '🔥 ' + t('hot') }[p.badge] || ''; return `<div class="prod-card"><div class="pc-img">${p.images && p.images.length ? `<img src="${p.images[0]}">` : '<div style="font-size:2rem">📦</div>'}${bt ? `<div class="pc-badge">${bt}</div>` : ''}${p.stock <= 0 ? `<div class="pc-oos-overlay">${t('outOfStock')}</div>` : ''}</div><div class="pc-body"><div class="prod-price">${p.price} ${getCurrency()}</div><div class="prod-name">${p.name}</div>${p.desc ? `<div class="prod-desc">${p.desc.substring(0, 60)}</div>` : ''}<button class="btn p cart-btn" onclick="addToStoreCart('${p.id}', ${p.stock})">${inCart ? '✓ ' + t('inCart') : '+ ' + t('cart')}</button></div></div>`; }).join(''); }
 
-function addToSC(id, btn) { const p = D.products.find(x => x.id === id); if (!p) return; const ex = D.storeCart.find(c => c.id === id); if (ex) ex.qty++; else D.storeCart.push({ id, name: p.name, price: p.price, image: p.images?.[0] || '', qty: 1 }); sv('storeCart'); updateSCnt(); if (btn) { btn.innerHTML = '✓ ' + t('inCart'); btn.style.background = 'var(--green)'; } toast(t('addedToCart')); }
+function addToStoreCart(id) { const p = D.products.find(x => x.id === id); if (!p || p.stock <= 0) return; const ex = D.storeCart.find(c => c.id === id); if (ex) ex.qty++; else D.storeCart.push({ id, name: p.name, price: p.price, image: p.images?.[0] || '', qty: 1 }); sv('storeCart'); updateSCnt(); toast(t('addedToCart')); rStoreGrid(); }
 
 function updateSCnt() { const tot = D.storeCart.reduce((s, c) => s + c.qty, 0); const el = document.getElementById('scCnt'); el.textContent = tot; el.style.display = tot ? 'inline-flex' : 'none'; }
 
 function toggleCart() { document.getElementById('cartPanel').classList.toggle('on'); document.getElementById('cartOv').classList.toggle('on'); renderCartP(); }
 
-function renderCartP() { const body = document.getElementById('cartBody'), ft = document.getElementById('cartFt'); if (!D.storeCart.length) { body.innerHTML = `<div class="tbl-empty"><div style="font-size:2rem;margin-bottom:.5rem">🛍️</div>${t('emptyCart')}</div>`; ft.style.display = 'none'; return; } ft.style.display = 'block'; const total = D.storeCart.reduce((s, c) => s + c.price * c.qty, 0); body.innerHTML = D.storeCart.map(it => `<div style="display:flex;align-items:center;gap:.6rem;padding:.65rem 0;border-bottom:1px solid var(--border)"><div style="width:46px;height:46px;border-radius:8px;overflow:hidden;background:var(--s2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">${it.image ? `<img src="${it.image}" style="width:100%;height:100%;object-fit:cover">` : '📦'}</div><div style="flex:1"><div style="font-size:.8rem;font-weight:700">${it.name}</div><div style="font-size:.72rem;color:var(--gold);font-weight:800">${it.price} ${getCurrency()}</div><div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem"><button class="qb" onclick="chSCQ('${it.id}',-1)">−</button><span style="font-size:.8rem;font-weight:800;min-width:16px;text-align:center">${it.qty}</span><button class="qb" onclick="chSCQ('${it.id}',1)">+</button><button style="background:none;border:none;color:var(--muted);cursor:pointer;margin-right:auto;font-size:.9rem" onclick="rmSC('${it.id}')">🗑</button></div></div></div>`).join(''); document.getElementById('cartTot').innerHTML = fmt(total); }
+function renderCartP() { const body = document.getElementById('cartBody'), ft = document.getElementById('cartFt'); if (!D.storeCart.length) { body.innerHTML = `<div class="tbl-empty"><div style="font-size:2rem">🛍️</div>${t('emptyCart')}</div>`; ft.style.display = 'none'; return; } ft.style.display = 'block'; const total = D.storeCart.reduce((s, c) => s + c.price * c.qty, 0); body.innerHTML = D.storeCart.map(it => `<div class="cart-item"><div class="cart-item-img">${it.image ? `<img src="${it.image}">` : '📦'}</div><div class="cart-item-info"><div class="cart-item-name">${it.name}</div><div class="cart-item-price">${it.price} ${getCurrency()}</div><div class="cart-qty"><button class="cart-qty-btn" onclick="chSCQ('${it.id}',-1)">−</button><span style="min-width:20px;text-align:center">${it.qty}</span><button class="cart-qty-btn" onclick="chSCQ('${it.id}',1)">+</button><button style="background:none;border:none;color:red;margin-left:auto" onclick="rmSC('${it.id}')">🗑</button></div></div></div>`).join(''); document.getElementById('cartTot').innerHTML = fmt(total); }
 
 function chSCQ(id, d) { const it = D.storeCart.find(c => c.id === id); if (!it) return; it.qty += d; if (it.qty <= 0) D.storeCart = D.storeCart.filter(c => c.id !== id); sv('storeCart'); updateSCnt(); renderCartP(); }
 
 function rmSC(id) { D.storeCart = D.storeCart.filter(c => c.id !== id); sv('storeCart'); updateSCnt(); renderCartP(); }
-function goCheckout() {
-  toggleCart();
-  nav('checkout');
-  const total = D.storeCart.reduce((s, c) => s + c.price * c.qty, 0);
-  const tax = Math.round((D.biz.tax || 0) / 100 * total);
-  document.getElementById('coWrap').innerHTML = `
-    <h2 style="font-size:1.3rem;font-weight:900;margin-bottom:1.1rem">${t('checkout')}</h2>
-    <div class="card" style="margin-bottom:1rem">
-      <div class="card-hd"><h3>${t('orderSummary')}</h3></div>
-      <div style="padding:1rem">
-        ${D.storeCart.map(c => `<div style="display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span>${c.name} × ${c.qty}</span><span>${(c.price * c.qty).toLocaleString()} ${getCurrency()}</span></div>`).join('')}
-        ${tax ? `<div style="display:flex;justify-content:space-between;padding:.4rem 0;font-size:.8rem;color:var(--muted)"><span>${t('tax')} ${D.biz.tax}%</span><span>${tax.toLocaleString()} ${getCurrency()}</span></div>` : ''}
-        <div style="display:flex;justify-content:space-between;font-weight:900;font-size:.95rem;padding:.5rem 0;color:var(--gold)"><span>${t('total')}</span><span>${fmt(total + tax)}</span></div>
-      </div>
-    </div>
-    <div class="card" style="padding:1.25rem">
-      <div class="fg2">
-        <div class="fg"><label>${t('fullName')} *</label><input class="fc" id="coN"></div>
-        <div class="fg"><label>${t('phoneNumber')} *</label><input class="fc" id="coPh"></div>
-        <div class="fg f"><label>${t('address')}</label><input class="fc" id="coAd"></div>
-      </div>
-      <div style="margin-top:.9rem">
-        <div style="font-size:.72rem;font-weight:700;color:var(--muted);margin-bottom:.5rem">${t('paymentMethod')}:</div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem" id="stPayMethods">
-          ${['نقداً', 'Bankily', 'Masrivi', 'Sedad', 'BimBank', 'Click', 'GazaPay', 'Amanty'].map(m => `<button onclick="pickStPay('${m}',this)" class="btn sm" style="text-align:center">${m}</button>`).join('')}
-        </div>
-        <div id="stPayChosen" style="font-size:.82rem;color:var(--green);margin-top:.5rem;font-weight:700"></div>
-      </div>
-      <button class="btn p" style="width:100%;padding:.7rem;font-size:.9rem;margin-top:.9rem" onclick="placeStoreOrder(${total + tax})">✦ ${t('confirmOrder')}</button>
-    </div>
-  `;
-  window.stPayMethod = 'نقداً';
-}
 
-let stPayM = 'نقداً';
-function pickStPay(m, b) { stPayM = m; document.querySelectorAll('#stPayMethods .btn').forEach(x => { x.classList.remove('p'); x.style.background = ''; }); b.classList.add('p'); document.getElementById('stPayChosen').innerHTML = '✓ ' + t('paymentMethod') + ': ' + m; }
+function goCheckout() { toggleCart(); nav('checkout'); const total = D.storeCart.reduce((s, c) => s + c.price * c.qty, 0), tax = Math.round((D.biz.tax || 0) / 100 * total); document.getElementById('coWrap').innerHTML = `<h2>${t('checkout')}</h2><div class="card" style="margin-bottom:1rem"><div class="card-hd"><h3>${t('orderSummary')}</h3></div><div style="padding:1rem">${D.storeCart.map(c => `<div style="display:flex;justify-content:space-between;padding:.4rem 0">${c.name} × ${c.qty}<span>${fmt(c.price * c.qty)}</span></div>`).join('')}<div style="display:flex;justify-content:space-between;font-weight:900;margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--border)"><span>${t('total')}</span><span>${fmt(total + tax)}</span></div></div></div><div class="card" style="padding:1rem"><div class="fg2"><div class="fg"><label>${t('fullName')} *</label><input class="fc" id="coN"></div><div class="fg"><label>${t('phoneNumber')} *</label><input class="fc" id="coPh"></div><div class="fg f"><label>${t('address')}</label><input class="fc" id="coAd"></div></div><div style="margin-top:1rem"><label>${t('paymentMethod')}:</label><div class="pay-grid" style="margin-top:.3rem">${['نقداً', 'Bankily', 'Masrivi', 'Sedad', 'BimBank', 'Click', 'GazaPay', 'Amanty'].map(m => `<button onclick="window.selectedPay='${m}';this.style.background='var(--gold)';this.style.color='#000'" class="pay-btn" style="background:var(--s2)">${m}</button>`).join('')}</div></div><button class="btn p" style="width:100%;margin-top:1rem" onclick="placeStoreOrder(${total + tax})">${t('confirmOrder')}</button></div>`; window.selectedPay = 'نقداً'; }
 
-function placeStoreOrder(total) {
-  const name = document.getElementById('coN').value.trim(), phone = document.getElementById('coPh').value.trim();
-  if (!name || !phone) { toast(t('fillRequiredFields'), 'err'); return; }
-  const order = { id: uid().slice(0, 6).toUpperCase(), customerName: name, phone, address: document.getElementById('coAd').value.trim(), items: [...D.storeCart.map(c => ({ ...c }))], total, payMethod: stPayM || t('cash'), date: today(), status: 'pending', source: 'store' };
-  D.orders.push(order);
-  sv('orders');
-  const inv = { id: 'INV-' + order.id, client: name, phone, items: D.storeCart.map(c => `${c.qty}x ${c.name}`).join('، '), amount: total, status: 'pending', date: today(), notes: '', fromOrder: order.id };
-  D.invoices.push(inv);
-  sv('invoices');
-  D.storeCart = [];
-  sv('storeCart');
-  updateSCnt();
-  document.getElementById('coWrap').innerHTML = `<div class="tbl-empty" style="padding:4rem 2rem"><div style="font-size:5rem;margin-bottom:1rem">✅</div><h2 style="font-size:1.6rem;font-weight:900;margin-bottom:.6rem">${t('orderReceived')}</h2><p style="color:var(--muted);margin-bottom:.4rem">${t('orderNumber')}: <b style="color:var(--gold)">#${order.id}</b></p><p style="color:var(--muted);margin-bottom:.4rem">${t('paymentMethod')}: ${order.payMethod}</p><p style="color:var(--muted);margin-bottom:2rem">${t('thankYouMessage').replace('{name}', name)}</p><button class="btn p" onclick="nav('store')">← ${t('backToStore')}</button></div>`;
-  toast(t('orderConfirmed'));
-}
+function placeStoreOrder(total) { const name = document.getElementById('coN').value.trim(), phone = document.getElementById('coPh').value.trim(); if (!name || !phone) { toast(t('fillRequiredFields'), 'err'); return; } const order = { id: uid().slice(0, 6).toUpperCase(), customerName: name, phone, address: document.getElementById('coAd').value.trim(), items: [...D.storeCart], total, payMethod: window.selectedPay || 'نقداً', date: today(), status: 'pending', source: 'store' }; D.orders.push(order); sv('orders'); D.storeCart = []; sv('storeCart'); updateSCnt(); document.getElementById('coWrap').innerHTML = `<div class="tbl-empty"><div style="font-size:3rem">✅</div><h2>${t('orderReceived')}</h2><p>${t('orderNumber')}: #${order.id}</p><button class="btn p" onclick="nav('store')">← ${t('backToStore')}</button></div>`; toast(t('orderConfirmed')); }
 
-function rOrders() {
-  document.getElementById('ordersBody').innerHTML = [...D.orders].reverse().map(o => `<tr><td><b>#${o.id}</b></td><td>${o.customerName || '—'}${o.phone ? `<br><span style="font-size:.68rem;color:var(--muted)">${o.phone}</span>` : ''}</td><td style="font-size:.72rem;color:var(--muted);max-width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${(o.items || []).map(it => `${it.qty}x ${it.name}`).join('، ')}</div><td><b style="color:var(--gold)">${fmt(o.total)}</b></div><td><span class="pill ${o.payMethod === 'نقداً' ? 'pg' : 'pb'}">${o.payMethod || '—'}</span></div><td>${o.date}</div><td><span class="pill ${o.source === 'pos' ? 'py' : 'pb'}">${o.source === 'pos' ? 'POS' : t('store')}</span></div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="prtOrd('${o.id}')">🖨️</button><button class="btn ico sm danger" onclick="delOrd('${o.id}')">🗑</button></div></tr>`).join('') || `<tr><td colspan="8" class="tbl-empty">${t('noOrders')}</td></tr>`;
-}
+function rOrders() { document.getElementById('ordersBody').innerHTML = [...D.orders].reverse().map(o => `<tr><td><b>#${o.id}</b></td><td>${o.customerName || '—'}${o.phone ? `<br><span style="font-size:.68rem;color:var(--muted)">${o.phone}</span>` : ''}</td><td style="font-size:.72rem;max-width:140px">${(o.items || []).map(it => `${it.qty}x ${it.name}`).join('، ')}</div><td><b style="color:var(--gold)">${fmt(o.total)}</b></div><td><span class="pill ${o.payMethod === 'نقداً' ? 'pg' : 'pb'}">${o.payMethod || '—'}</span></div><td>${o.date}</td><td><span class="pill ${o.source === 'pos' ? 'py' : 'pb'}">${o.source === 'pos' ? 'POS' : t('store')}</span></div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="prtOrd('${o.id}')">🖨️</button><button class="btn ico sm danger" onclick="delOrd('${o.id}')">🗑</button></div></tr>`).join('') || `<tr><td colspan="8" class="tbl-empty">${t('noOrders')}</div></tr>`; }
 
 function delOrd(id) { if (!confirm(t('confirmDelete'))) return; D.orders = D.orders.filter(o => o.id !== id); sv('orders'); rOrders(); toast(t('deleted')); }
 
 function prtOrd(id) { const o = D.orders.find(x => x.id === id); if (!o) return; document.getElementById('pSlot').innerHTML = buildInvH({ id: 'INV-' + o.id, client: o.customerName, phone: o.phone || '', items: (o.items || []).map(c => `${c.qty}x ${c.name}`).join('، '), amount: o.total, status: o.status === 'done' ? 'paid' : 'pending', date: o.date, notes: '' }, o.items); window.print(); }
 
-function renderInvs() {
-  const q = (document.getElementById('invSrch')?.value || '').toLowerCase();
-  let list = [...D.invoices].reverse();
-  if (q) list = list.filter(i => i.client.toLowerCase().includes(q) || i.id.toLowerCase().includes(q));
-  document.getElementById('invBody').innerHTML = list.length ? list.map(inv => `<tr><td><b style="font-family:'IBM Plex Mono';font-size:.78rem">${inv.id}</b></div></td><td>${inv.client}${inv.phone ? `<br><span style="font-size:.68rem;color:var(--muted)">${inv.phone}</span>` : ''}</div></td><td>${inv.date}</div><td><b style="color:var(--gold)">${fmt(inv.amount)}</b></div><td><span class="pill ${inv.status === 'paid' ? 'pg' : inv.status === 'cancelled' ? 'pr' : 'py'}">${t(inv.status)}</span></div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="viewInv('${inv.id}')">👁</button><button class="btn ico sm" onclick="prtInv('${inv.id}')">🖨️</button><button class="btn ico sm danger" onclick="delInv('${inv.id}')">🗑</button></div></tr>`).join('') : `<tr><td colspan="6" class="tbl-empty">${t('noInvoices')}</div></tr>`;
-}
+function renderInvs() { const q = (document.getElementById('invSrch')?.value || '').toLowerCase(); let list = [...D.invoices].reverse(); if (q) list = list.filter(i => i.client.toLowerCase().includes(q) || i.id.toLowerCase().includes(q)); document.getElementById('invBody').innerHTML = list.length ? list.map(inv => `<tr><td><b style="font-family:monospace;font-size:.78rem">${inv.id}</b></div></td><td>${inv.client}${inv.phone ? `<br><span style="font-size:.68rem">${inv.phone}</span>` : ''}</div></td><td>${inv.date}</div><td><b style="color:var(--gold)">${fmt(inv.amount)}</b></div><td><span class="pill ${inv.status === 'paid' ? 'pg' : inv.status === 'cancelled' ? 'pr' : 'py'}">${t(inv.status)}</span></div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="viewInv('${inv.id}')">👁</button><button class="btn ico sm" onclick="prtInv('${inv.id}')">🖨️</button><button class="btn ico sm danger" onclick="delInv('${inv.id}')">🗑</button></div></tr>`).join('') : `<tr><td colspan="6" class="tbl-empty">${t('noInvoices')}</div></tr>`; }
 
 function openIM() { ['miCl', 'miPh', 'miItems', 'miNotes'].forEach(id => document.getElementById(id).value = ''); document.getElementById('miAmt').value = ''; document.getElementById('miSt').value = 'pending'; openM('mInv'); }
 
@@ -1505,7 +1352,7 @@ function prtInv(id) { const inv = D.invoices.find(i => i.id === id); if (!inv) r
 
 function buildInvH(inv, itemsArr) { const b = D.biz, tax = Math.round((b.tax || 0) / 100 * inv.amount), total = inv.amount + tax; const rows = itemsArr && itemsArr.length ? itemsArr.map(it => `<tr><td>${it.name}</div><td>${it.price} ${getCurrency()}</div><td>${it.qty}</div><td>${(it.price * it.qty).toLocaleString()} ${getCurrency()}</div></tr>`).join('') : `<tr><td colspan="4">${inv.items || '—'}</div></tr>`; return `<div class="inv-print"><div class="inv-hd"><div class="inv-brand"><h2>${b.name || t('store')}</h2><p>${b.addr || ''}<br>${b.phone ? '📞 ' + b.phone : ''} ${b.email ? '| ✉️ ' + b.email : ''}<br>${b.web ? '🌐 ' + b.web : ''}</p>${b.taxNum ? `<p>${t('taxNumber')}: ${b.taxNum}</p>` : ''}</div><div class="inv-meta"><p><strong>${t('invoiceNumber')}:</strong> ${inv.id}</p><p><strong>${t('date')}:</strong> ${inv.date}</p><p><strong>${t('status')}:</strong> ${t(inv.status)}</p></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.25rem"><div><h4 style="font-size:8pt;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">${t('customer')}</h4><p style="font-size:9pt;line-height:1.7"><strong>${inv.client}</strong><br>${inv.phone || ''}</p></div><div><h4 style="font-size:8pt;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">${t('products')}</h4><p style="font-size:8pt">${inv.items || '—'}</p></div></div><table class="inv-tbl"><thead><tr><th>${t('description')}</th><th>${t('price')}</th><th>${t('quantity')}</th><th>${t('total')}</th></tr></thead><tbody>${rows}</tbody></table><div style="max-width:220px;margin-right:auto"><div class="inv-tr"><span>${t('subtotal')}</span><span>${inv.amount.toLocaleString()} ${getCurrency()}</span></div>${tax ? `<div class="inv-tr"><span>${t('tax')} ${b.tax}%</span><span>${tax.toLocaleString()} ${getCurrency()}</span></div>` : ''}<div class="inv-tr g"><span>${t('total')}</span><span>${total.toLocaleString()} ${getCurrency()}</span></div></div>${inv.notes ? `<p style="margin-top:.85rem;font-size:8pt;color:#666">${inv.notes}</p>` : ''}<div class="inv-foot">${b.footer || t('thankYou')}<br>${b.phone ? '📞 ' + b.phone + ' ' : ''} ${b.wa ? '💬 ' + b.wa + ' ' : ''} ${b.fb ? '📘 ' + b.fb : ''}</div></div>`; }
 
-function rCusts() { document.getElementById('custBody').innerHTML = D.customers.length ? D.customers.map(c => { const ords = D.orders.filter(o => o.customerName === c.name || o.phone === c.phone), tot = ords.reduce((s, o) => s + o.total, 0), last = ords.length ? ords[ords.length - 1].date : '—'; return `<tr><td><b>${c.name}</b></div></td><td>${c.phone || '—'}</div><td>${c.email || '—'}</div><td>${c.city || '—'}</div><td><b style="color:var(--gold)">${fmt(tot)}</b></div><td>${last}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editCust('${c.id}')">✏️</button><button class="btn ico sm danger" onclick="delCust('${c.id}')">🗑</button></div></tr>`; }).join('') : `<tr><td colspan="7" class="tbl-empty">${t('noCustomers')}</div></tr>`; }
+function rCusts() { document.getElementById('custBody').innerHTML = D.customers.length ? D.customers.map(c => { const ords = D.orders.filter(o => o.customerName === c.name || o.phone === c.phone), tot = ords.reduce((s, o) => s + o.total, 0), last = ords.length ? ords[ords.length - 1].date : '—'; return `<tr><td><b>${c.name}</b></div><tr><td style="font-size:.78rem">${c.phone || '—'}</div><td><td style="font-size:.78rem">${c.email || '—'}</div><td><td style="font-size:.78rem">${c.city || '—'}</div><td><b style="color:var(--gold)">${fmt(tot)}</b></div><td>${last}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editCust('${c.id}')">✏️</button><button class="btn ico sm danger" onclick="delCust('${c.id}')">🗑</button></div></tr>`; }).join('') : `<tr><td colspan="7" class="tbl-empty">${t('noCustomers')}</div></tr>`; }
 
 function openCM() { eCustId = null; ['mcN', 'mcPh', 'mcEm', 'mcCt', 'mcNt'].forEach(id => document.getElementById(id).value = ''); document.getElementById('mCT').innerHTML = t('newCustomerTitle'); openM('mCust'); }
 
@@ -1515,7 +1362,7 @@ function saveCust() { const name = document.getElementById('mcN').value.trim(); 
 
 function delCust(id) { if (!confirm(t('confirmDelete'))) return; D.customers = D.customers.filter(c => c.id !== id); sv('customers'); rCusts(); toast(t('deleted')); }
 
-function rSups() { document.getElementById('supBody').innerHTML = D.suppliers.length ? D.suppliers.map(s => `<tr><td><b>${s.name}</b></div><tr><td>${s.company || '—'}</div></td><td>${s.phone || '—'}</div><td>${s.category || '—'}</div><td style="font-size:.78rem;color:var(--muted);max-width:150px">${s.notes || '—'}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editSup('${s.id}')">✏️</button><button class="btn ico sm danger" onclick="delSup('${s.id}')">🗑</button></div></tr>`).join('') : `<tr><td colspan="6" class="tbl-empty">${t('noSuppliers')}</div></tr>`; }
+function rSups() { document.getElementById('supBody').innerHTML = D.suppliers.length ? D.suppliers.map(s => `<tr><td><b>${s.name}</b></div></td><td style="font-size:.78rem">${s.company || '—'}</div><tr><td style="font-size:.78rem">${s.phone || '—'}</div></td><td style="font-size:.78rem">${s.category || '—'}</div><td style="font-size:.75rem;color:var(--muted);max-width:150px">${s.notes || '—'}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editSup('${s.id}')">✏️</button><button class="btn ico sm danger" onclick="delSup('${s.id}')">🗑</button></div></tr>`).join('') : `<tr><td colspan="6" class="tbl-empty">${t('noSuppliers')}</div></tr>`; }
 
 function openSM() { eSupId = null; ['msN', 'msCo', 'msPh', 'msCat', 'msNt'].forEach(id => document.getElementById(id).value = ''); document.getElementById('mST').innerHTML = t('newSupplierTitle'); openM('mSup'); }
 
@@ -1527,19 +1374,11 @@ function delSup(id) { if (!confirm(t('confirmDelete'))) return; D.suppliers = D.
 
 function renderLS() { const thr = parseInt(document.getElementById('lsThr')?.value || 5), low = D.products.filter(p => p.stock <= thr).sort((a, b) => a.stock - b.stock); document.getElementById('lsContent').innerHTML = low.length ? low.map(p => `<div class="ls-row"><div style="width:34px;height:34px;border-radius:5px;overflow:hidden;background:var(--s3);display:flex;align-items:center;justify-content:center;flex-shrink:0">${p.images && p.images.length ? `<img src="${p.images[0]}" style="width:100%;height:100%;object-fit:cover">` : '📦'}</div><div style="flex:1"><div style="font-weight:800;font-size:.85rem">${p.name}</div><div style="font-size:.72rem;color:var(--muted)">${p.category}</div></div><div style="font-weight:900;font-size:.88rem;color:${p.stock <= 0 ? 'var(--red)' : 'var(--orange)'}">${p.stock} ${p.unit || t('piece')}</div><span class="pill ${p.stock <= 0 ? 'pr' : 'py'}">${p.stock <= 0 ? t('outOfStock') : t('lowStock')}</span><button class="btn p sm" onclick="openRst('${p.id}')">📦 ${t('restock')}</button></div>`).join('') : `<div class="tbl-empty" style="color:var(--green);font-weight:700">✅ ${t('stockGood')}</div>`; buildSB(); }
 
-function rRep() {
-  const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d.toLocaleDateString('en-CA')); }
-  const revs = days.map(d => D.orders.filter(o => o.date === d).reduce((s, o) => s + o.total, 0));
-  const totalR = D.orders.reduce((s, o) => s + o.total, 0), totalC = D.orders.reduce((s, o) => s + (o.items || []).reduce((ss, it) => ss + (it.cost || it.price * 0.6) * it.qty, 0), 0), totalP = totalR - totalC;
-  const cats = {}; D.orders.forEach(o => (o.items || []).forEach(it => { const p = D.products.find(x => x.id === it.id); const c = p?.category || t('other'); cats[c] = (cats[c] || 0) + it.price * it.qty; }));
-  const mx = Math.max(...revs, 1);
-  document.getElementById('repCards').innerHTML = `<div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">📊 ${t('revenueLast7Days')}</div><div class="bar-ch" style="height:100px">${revs.map((r, i) => `<div class="bc-col"><div class="bc-bar" style="height:${Math.max(2, (r / mx * 86)).toFixed(0)}px"></div><div class="bc-lbl">${days[i].slice(5).replace('-', '/')}</div></div>`).join('')}</div></div><div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">💰 ${t('financialSummary')}</div>${[[t('totalRevenue'), fmt(totalR), 'var(--gold)'], [t('totalCost'), fmt(Math.round(totalC)), 'var(--red)'], [t('netProfit'), fmt(Math.round(totalP)), 'var(--green)'], [t('profitMargin'), (totalR ? ((totalP / totalR) * 100).toFixed(1) : 0) + '%', 'var(--blue)'], [t('totalOrders'), D.orders.length, 'var(--text)'], [t('totalInvoices'), D.invoices.length, 'var(--text)']].map(([l, v, c]) => `<div style="display:flex;justify-content:space-between;padding:.38rem 0;border-bottom:1px solid var(--border);font-size:.82rem"><span style="color:var(--muted)">${l}</span><span style="font-weight:800;color:${c}">${v}</span></div>`).join('')}</div><div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">🗂️ ${t('salesByCategory')}</div>${Object.entries(cats).sort((a, b) => b[1] - a[1]).map(([c, v]) => `<div style="margin-bottom:.5rem"><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:3px"><span>${c}</span><span style="color:var(--gold);font-weight:700">${fmt(v)}</span></div><div style="height:4px;background:var(--s2);border-radius:2px"><div style="height:100%;width:${Math.round(v / Math.max(...Object.values(cats)) * 100)}%;background:var(--gold);border-radius:2px"></div></div></div>`).join('') || `<div class="tbl-empty">${t('noData')}</div>`}</div>`;
-  document.getElementById('profitBody').innerHTML = days.map((day, i) => { const dayO = D.orders.filter(o => o.date === day), rev = revs[i], cost = dayO.reduce((s, o) => s + (o.items || []).reduce((ss, it) => ss + (it.cost || it.price * 0.6) * it.qty, 0), 0), profit = rev - cost, margin = rev ? (profit / rev * 100).toFixed(1) : 0; return `<tr><td>${day.slice(5).replace('-', '/')}</div><td>${dayO.length}</div><td><b style="color:var(--gold)">${fmt(rev)}</b></div><td style="color:var(--muted)">${fmt(Math.round(cost))}</div><td><b style="color:var(--green)">${fmt(Math.round(profit))}</b></div><td><span class="pill ${margin >= 20 ? 'pg' : margin >= 10 ? 'py' : 'pr'}">${margin}%</span></div></tr>`; }).join('');
-}
+function rRep() { const days = []; for (let i = 6; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); days.push(d.toLocaleDateString('en-CA')); } const revs = days.map(d => D.orders.filter(o => o.date === d).reduce((s, o) => s + o.total, 0)); const totalR = D.orders.reduce((s, o) => s + o.total, 0), totalC = D.orders.reduce((s, o) => s + (o.items || []).reduce((ss, it) => ss + (it.cost || it.price * 0.6) * it.qty, 0), 0), totalP = totalR - totalC; const cats = {}; D.orders.forEach(o => (o.items || []).forEach(it => { const p = D.products.find(x => x.id === it.id); const c = p?.category || t('other'); cats[c] = (cats[c] || 0) + it.price * it.qty; })); const mx = Math.max(...revs, 1); document.getElementById('repCards').innerHTML = `<div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">📊 ${t('revenueLast7Days')}</div><div class="bar-ch" style="height:100px">${revs.map((r, i) => `<div class="bc-col"><div class="bc-bar" style="height:${Math.max(2, (r / mx * 86)).toFixed(0)}px"></div><div class="bc-lbl">${days[i].slice(5).replace('-', '/')}</div></div>`).join('')}</div></div><div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">💰 ${t('financialSummary')}</div>${[[t('totalRevenue'), fmt(totalR), 'var(--gold)'], [t('totalCost'), fmt(Math.round(totalC)), 'var(--red)'], [t('netProfit'), fmt(Math.round(totalP)), 'var(--green)'], [t('profitMargin'), (totalR ? ((totalP / totalR) * 100).toFixed(1) : 0) + '%', 'var(--blue)'], [t('totalOrders'), D.orders.length, 'var(--text)'], [t('totalInvoices'), D.invoices.length, 'var(--text)']].map(([l, v, c]) => `<div style="display:flex;justify-content:space-between;padding:.38rem 0;border-bottom:1px solid var(--border);font-size:.82rem"><span style="color:var(--muted)">${l}</span><span style="font-weight:800;color:${c}">${v}</span></div>`).join('')}</div><div class="card" style="padding:1.1rem"><div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:.75rem">🗂️ ${t('salesByCategory')}</div>${Object.entries(cats).sort((a, b) => b[1] - a[1]).map(([c, v]) => `<div style="margin-bottom:.5rem"><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:3px"><span>${c}</span><span style="color:var(--gold);font-weight:700">${fmt(v)}</span></div><div style="height:4px;background:var(--s2);border-radius:2px"><div style="height:100%;width:${Math.round(v / Math.max(...Object.values(cats)) * 100)}%;background:var(--gold);border-radius:2px"></div></div></div>`).join('') || `<div class="tbl-empty">${t('noData')}</div>`}</div>`; document.getElementById('profitBody').innerHTML = days.map((day, i) => { const dayO = D.orders.filter(o => o.date === day), rev = revs[i], cost = dayO.reduce((s, o) => s + (o.items || []).reduce((ss, it) => ss + (it.cost || it.price * 0.6) * it.qty, 0), 0), profit = rev - cost, margin = rev ? (profit / rev * 100).toFixed(1) : 0; return `<table><td style="font-size:.78rem">${day.slice(5).replace('-', '/')}</div><td><td style="text-align:center">${dayO.length}</div><td><b style="color:var(--gold)">${fmt(rev)}</b></div><td style="color:var(--muted)">${fmt(Math.round(cost))}</div><td><b style="color:var(--green)">${fmt(Math.round(profit))}</b></div><td><span class="pill ${margin >= 20 ? 'pg' : margin >= 10 ? 'py' : 'pr'}">${margin}%</span></div></tr>`; }).join(''); }
 
 function doScan(code) { code = code.trim(); if (!code) return; const p = D.products.find(x => x.barcode === code || x.id === code); const el = document.getElementById('scanResult'); el.style.display = 'block'; if (p) { el.innerHTML = `<div style="background:var(--s1);border:1px solid var(--green);border-radius:12px;padding:1rem"><div style="display:flex;align-items:center;gap:.85rem"><div style="width:52px;height:52px;border-radius:8px;overflow:hidden;background:var(--s2);display:flex;align-items:center;justify-content:center;flex-shrink:0">${p.images && p.images.length ? `<img src="${p.images[0]}" style="width:100%;height:100%;object-fit:cover">` : '📦'}</div><div style="flex:1"><div style="font-weight:800;font-size:.9rem">${p.name}</div><div style="font-size:.75rem;color:var(--muted)">${p.category}</div><div style="font-size:.9rem;font-weight:900;color:var(--gold)">${p.price} ${getCurrency()}</div><div style="font-size:.72rem;color:${p.stock > 0 ? 'var(--green)' : 'var(--red)'};font-weight:700">${t('stock')}: ${p.stock} ${p.unit || t('piece')}</div></div><div style="display:flex;flex-direction:column;gap:.4rem"><button class="btn p sm" onclick="addToPos('${p.id}');nav('pos')">+ ${t('pos')}</button><button class="btn sm" onclick="showBC('${p.id}')">🔖 ${t('barcode')}</button></div></div></div>`; toast(t('productFound') + ': ' + p.name); } else { el.innerHTML = `<div style="background:rgba(239,68,68,.1);border:1px solid var(--red);border-radius:12px;padding:1rem;text-align:center;font-weight:700;color:var(--red)">❌ ${t('productNotFound')}</div>`; toast(t('productNotFound'), 'err'); } document.getElementById('scanInput').value = ''; document.getElementById('scanInput').focus(); }
 
-function rUsers() { if (CU.role !== 'admin') { document.getElementById('usersBody').innerHTML = `<tr><td colspan="6" class="tbl-empty" style="color:var(--red);font-weight:700">⛔ ${t('noPermissionTitle')}</div></tr>`; document.getElementById('addUserBtn').style.display = 'none'; return; } document.getElementById('addUserBtn').style.display = ''; document.getElementById('usersBody').innerHTML = D.users.map(u => `<tr><td><b>${u.name}</b></div><td><span style="font-family:'IBM Plex Mono';font-size:.78rem">${u.username}</span></div><td><span class="pill ${ { admin: 'py', cashier: 'pb', viewer: 'pp' }[u.role]}">${t(u.role)}</span></div><td style="font-size:.75rem;color:var(--muted)">${(PERMS[u.role] || []).length} ${t('pages')}</div><td><td style="font-size:.75rem;color:var(--muted)">${u.lastLogin || '—'}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editUser('${u.id}')">✏️</button>${u.id !== 'u1' ? `<button class="btn ico sm danger" onclick="delUser('${u.id}')">🗑</button>` : ''}</div></tr>`).join(''); document.getElementById('permGrid').innerHTML = Object.entries(PERMS).map(([role, pages]) => `<div style="background:var(--s2);border-radius:9px;padding:.9rem;border:1px solid var(--border)"><div style="font-size:.82rem;font-weight:800;margin-bottom:.65rem;color:${ { admin: 'var(--gold)', cashier: 'var(--blue)', viewer: 'var(--purple)' }[role]}">${t(role)}</div><div style="font-size:.73rem;color:var(--muted);line-height:1.95">${pages.map(p => NAVD.find(n => n.id === p)).filter(Boolean).map(n => `✅ ${t(n.l)}`).join('<br>')}</div></div>`).join(''); }
+function rUsers() { if (CU.role !== 'admin') { document.getElementById('usersBody').innerHTML = `<tr><td colspan="6" class="tbl-empty" style="color:var(--red);font-weight:700">⛔ ${t('noPermissionTitle')}</div></tr>`; document.getElementById('addUserBtn').style.display = 'none'; return; } document.getElementById('addUserBtn').style.display = ''; document.getElementById('usersBody').innerHTML = D.users.map(u => `</tr><td style="font-size:.85rem;font-weight:700">${u.name}</div><td><span style="font-family:monospace;font-size:.75rem">${u.username}</span></div><td><span class="pill ${ { admin: 'py', cashier: 'pb', viewer: 'pp' }[u.role]}">${t(u.role)}</span></div><td style="font-size:.72rem;color:var(--muted)">${(PERMS[u.role] || []).length} ${t('pages')}</div><td><td style="font-size:.72rem;color:var(--muted)">${u.lastLogin || '—'}</div><td style="display:flex;gap:.3rem"><button class="btn ico sm" onclick="editUser('${u.id}')">✏️</button>${u.id !== 'u1' ? `<button class="btn ico sm danger" onclick="delUser('${u.id}')">🗑</button>` : ''}</div></tr>`).join(''); document.getElementById('permGrid').innerHTML = Object.entries(PERMS).map(([role, pages]) => `<div style="background:var(--s2);border-radius:9px;padding:.9rem;border:1px solid var(--border)"><div style="font-size:.82rem;font-weight:800;margin-bottom:.65rem;color:${ { admin: 'var(--gold)', cashier: 'var(--blue)', viewer: 'var(--purple)' }[role]}">${t(role)}</div><div style="font-size:.73rem;color:var(--muted);line-height:1.95">${pages.map(p => NAVD.find(n => n.id === p)).filter(Boolean).map(n => `✅ ${t(n.l)}`).join('<br>')}</div></div>`).join(''); }
 
 function openUM() { eUserId = null; ['muN', 'muU', 'muP'].forEach(id => document.getElementById(id).value = ''); document.getElementById('muR').value = 'cashier'; document.getElementById('mUT').innerHTML = t('newUserTitle'); document.getElementById('muHint').style.display = 'none'; openM('mUser'); }
 
@@ -1549,7 +1388,7 @@ function saveUser() { const name = document.getElementById('muN').value.trim(), 
 
 function delUser(id) { if (!confirm(t('confirmDelete'))) return; D.users = D.users.filter(u => u.id !== id); sv('users'); rUsers(); toast(t('deleted')); }
 
-function applyBiz() { const b = D.biz; document.getElementById('sbName').innerHTML = b.name || t('store'); document.getElementById('loginBizName').innerHTML = b.name || t('store'); document.getElementById('stHdN').innerHTML = b.name || t('store'); document.getElementById('stHdD').innerHTML = b.desc || t('discoverProducts'); if (b.logo) { const logoImg = `<img src="${b.logo}" style="width:100%;height:100%;object-fit:cover">`; document.getElementById('loginLogoPlaceholder').innerHTML = logoImg; document.getElementById('sbLogoPlaceholder').innerHTML = logoImg; document.getElementById('storeHeroLogo').innerHTML = logoImg; } else { document.getElementById('loginLogoPlaceholder').innerHTML = '🏪'; document.getElementById('sbLogoPlaceholder').innerHTML = '🏪'; document.getElementById('storeHeroLogo').innerHTML = '🏪'; } const links = []; if (b.phone) links.push(`<a href="tel:${b.phone}" class="store-link" style="border:1px solid var(--border);background:var(--s2)">📞 ${b.phone}</a>`); if (b.wa) links.push(`<a href="https://wa.me/${b.wa.replace(/\D/g, '')}" target="_blank" class="store-link" style="background:rgba(37,211,102,.1);border-color:#25d366;color:#25d366">💬 WhatsApp</a>`); if (b.fb) links.push(`<a href="${b.fb.startsWith('http') ? b.fb : 'https://' + b.fb}" target="_blank" class="store-link" style="background:rgba(66,103,178,.1);border-color:#4267B2;color:#4267B2">📘 Facebook</a>`); if (b.email) links.push(`<a href="mailto:${b.email}" class="store-link" style="background:rgba(59,130,246,.1);border-color:var(--blue);color:var(--blue)">✉️ ${b.email}</a>`); document.getElementById('stLinks').innerHTML = links.join(''); }
+function applyBiz() { const b = D.biz; document.getElementById('sbName').innerHTML = b.name || t('store'); document.getElementById('loginBizName').innerHTML = b.name || t('store'); document.getElementById('stHdN').innerHTML = b.name || t('store'); document.getElementById('stHdD').innerHTML = b.desc || t('discoverProducts'); if (b.logo) { document.getElementById('loginLogoPlaceholder').innerHTML = `<img src="${b.logo}" style="width:100%;height:100%;object-fit:cover">`; document.getElementById('sbLogoPlaceholder').innerHTML = `<img src="${b.logo}" style="width:100%;height:100%;object-fit:cover">`; document.getElementById('storeHeroLogo').innerHTML = `<img src="${b.logo}" style="width:100%;height:100%;object-fit:cover">`; } else { document.getElementById('loginLogoPlaceholder').innerHTML = '🏪'; document.getElementById('sbLogoPlaceholder').innerHTML = '🏪'; document.getElementById('storeHeroLogo').innerHTML = '🏪'; } const links = []; if (b.phone) links.push(`<a href="tel:${b.phone}" class="store-link" style="border:1px solid var(--border);background:var(--s2)">📞 ${b.phone}</a>`); if (b.wa) links.push(`<a href="https://wa.me/${b.wa.replace(/\D/g, '')}" target="_blank" class="store-link" style="background:rgba(37,211,102,.1);border-color:#25d366;color:#25d366">💬 WhatsApp</a>`); if (b.fb) links.push(`<a href="${b.fb.startsWith('http') ? b.fb : 'https://' + b.fb}" target="_blank" class="store-link" style="background:rgba(66,103,178,.1);border-color:#4267B2;color:#4267B2">📘 Facebook</a>`); if (b.email) links.push(`<a href="mailto:${b.email}" class="store-link" style="background:rgba(59,130,246,.1);border-color:var(--blue);color:var(--blue)">✉️ ${b.email}</a>`); document.getElementById('stLinks').innerHTML = links.join(''); }
 
 function rSettings() { const b = D.biz; [['sName', 'name'], ['sDesc', 'desc'], ['sAddr', 'addr'], ['sPhone', 'phone'], ['sWa', 'wa'], ['sEmail', 'email'], ['sFb', 'fb'], ['sWeb', 'web'], ['sTaxNum', 'taxNum'], ['sFooter', 'footer']].forEach(([id, k]) => { const el = document.getElementById(id); if (el) el.value = b[k] || ''; }); document.getElementById('sTax').value = b.tax || 0; if (b.logo) document.getElementById('logoPreview').innerHTML = `<img src="${b.logo}" style="width:100%;height:100%;object-fit:cover">`; else document.getElementById('logoPreview').innerHTML = '🏪'; }
 
