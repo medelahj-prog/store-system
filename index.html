@@ -290,6 +290,23 @@ select.fc option{background:var(--s2);color:var(--text);}
 @media print{body *{visibility:hidden!important;}#pSlot,#pSlot *{visibility:visible!important;}#pSlot{position:fixed;inset:0;background:#fff;z-index:99999;}}
 </style>
 </head>
+<script>
+// التحقق من وجود #admin في الرابط
+if (window.location.hash !== '#admin') {
+  // إخفاء شاشة الدخول وإظهار المتجر مباشرة
+  document.addEventListener('DOMContentLoaded', function() {
+    var loginWrap = document.getElementById('loginWrap');
+    var shell = document.getElementById('shell');
+    if (loginWrap) loginWrap.style.display = 'none';
+    if (shell) shell.style.display = 'block';
+    // فتح صفحة المتجر
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.classList.remove('on'));
+    var storePage = document.getElementById('p-store');
+    if (storePage) storePage.classList.add('on');
+  });
+}
+</script>
 <body>
 <div id="loginWrap">
   <div class="login-bg">
@@ -317,8 +334,7 @@ select.fc option{background:var(--s2);color:var(--text);}
       <input class="linput" type="password" id="liP" placeholder="••••••" onkeydown="if(event.key==='Enter')doLogin()">
     </div>
     <button class="lbtn" id="loginBtn" onclick="doLogin()">دخول →</button>
-    <div class="lerr" id="lerr">بيانات الدخول غير صحيحة</div>
-    <div class="lhint" id="loginHint">الحساب الافتراضي: <b style="color:var(--gold)">admin / admin123</b></div>
+    <div class="lerr" id="lerr">بيانات الدخول غير صحيحة</div> 
   </div>
 </div>
 
